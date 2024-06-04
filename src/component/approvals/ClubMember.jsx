@@ -38,7 +38,7 @@ const ClubMember = ({ props }) => {
   const getUser = async () => {
     setLoading3(true);
     try {
-      const result = await fetch(`http://localhost:8000/get`);
+      const result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/get`);
       const res = await result.json();
       const cm = res.filter((data) => data.role === "Club_Member").reverse();
       if (role === "Super_Admin") {
@@ -112,7 +112,7 @@ const ClubMember = ({ props }) => {
             position: position,
           };
         }
-        const data = await fetch(`http://localhost:8000/updateDetail/${id}`, {
+        const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/updateDetail/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(val),
@@ -137,7 +137,7 @@ const ClubMember = ({ props }) => {
           role: "Lead",
           position: position,
         };
-        const data = await fetch(`http://localhost:8000/updateDetail/${id}`, {
+        const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/updateDetail/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(val),
@@ -158,7 +158,7 @@ const ClubMember = ({ props }) => {
     }
 
     //  notification
-    await fetch("http://localhost:8000/addNotifications", {
+    await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/addNotifications", {
       method: "post",
       body: JSON.stringify({
         message: `Congrats: Now You are upgraded Club Member to ${value}, please login again`,
