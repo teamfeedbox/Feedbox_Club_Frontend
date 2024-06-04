@@ -96,7 +96,7 @@ const RescourcesTable = (props) => {
       setImg(currentUser.img);
       return;
     }
-    let result = await fetch(`http://localhost:8000/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -141,7 +141,7 @@ const RescourcesTable = (props) => {
       formData.append("title", title);
       formData.append("skill", skillName);
 
-      const response = await fetch("http://localhost:8000/upload", {
+      const response = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/upload", {
         method: "POST",
         body: formData,
         headers: {
@@ -171,7 +171,7 @@ const RescourcesTable = (props) => {
         skill: skillName,
       };
 
-      const response = await fetch("http://localhost:8000/linkUpload", {
+      const response = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/linkUpload", {
         method: "POST",
         body: JSON.stringify(val),
         headers: {
@@ -203,7 +203,7 @@ const RescourcesTable = (props) => {
     // console.log("l,mnuhgftr");
     setLoading2(true);
     let result = await fetch(
-      `http://localhost:8000/getAllResource/${skillName}`,
+      `https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getAllResource/${skillName}`,
       {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
@@ -255,7 +255,7 @@ const RescourcesTable = (props) => {
       if (result.isConfirmed) {
         const _id = { _id: id, driveId };
         const deleteCall = await fetch(
-          "http://localhost:8000/delete/Resource/pdf",
+          "https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/delete/Resource/pdf",
           {
             method: "DELETE",
             headers: {
