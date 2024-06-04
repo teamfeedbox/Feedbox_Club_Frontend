@@ -45,7 +45,7 @@ const SignupPage = () => {
 
   const collectData = async (e) => {
     e.preventDefault();
-    let result = await fetch("http://localhost:8000/register", {
+    let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/register", {
       method: "post", // post method because we want to save the data
       body: JSON.stringify({
         name,
