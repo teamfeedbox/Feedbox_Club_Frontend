@@ -42,7 +42,7 @@ const ModalWithForm = ({ show, onClose, product, quantity }) => {
 
 		const updateToSheet = async () => {
 			let data = await fetch(
-				`http://localhost:8000/submitProduct/${window.location.pathname.split("/")[
+				`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/submitProduct/${window.location.pathname.split("/")[
 				window.location.pathname.split("/").length - 1
 				]
 				}`,
@@ -203,7 +203,7 @@ export const CheckoutPage = () => {
 	useEffect(() => {
 		const fetchProducts = async () => {
 			const allProducts = await fetch(
-				"http://localhost:8000/merchandise/getallproducts"
+				"https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/merchandise/getallproducts"
 			);
 			const data = await allProducts.json();
 			setListProduct(data);
@@ -233,7 +233,7 @@ export const CheckoutPage = () => {
 		];
 	useEffect(() => {
 		const fetchData = async () => {
-			const productData = await fetch(`http://localhost:8000/getProduct/${id}/`);
+			const productData = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getProduct/${id}/`);
 			const data = await productData.json();
 			setProduct(data);
 			console.log("106", product);
@@ -243,7 +243,7 @@ export const CheckoutPage = () => {
 
 	useEffect(() => {
 		const fetchCoin = async () => {
-			const coinData = await fetch(`http://localhost:8000/getCoins`, {
+			const coinData = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getCoins`, {
 				headers: {
 					Authorization: "Bearer " + localStorage.getItem("jwt"),
 				},
