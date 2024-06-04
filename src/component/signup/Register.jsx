@@ -43,7 +43,7 @@ const Register = () => {
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
   const getColleges = async () => {
-    const data = await fetch(`http://localhost:8000/colleges/get`);
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/colleges/get`);
     const res = await data.json();
     let val = [];
     res.map((data) => {
@@ -88,7 +88,7 @@ const Register = () => {
     setLoading(true);
     // generateUniqueid();
     e.preventDefault();
-    let result = await fetch("http://localhost:8000/register", {
+    let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/register", {
       method: "post", // post method because we want to save the data
       body: JSON.stringify({
         name,
