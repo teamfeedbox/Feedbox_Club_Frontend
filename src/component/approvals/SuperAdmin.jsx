@@ -12,7 +12,7 @@ const SuperAdmin = () => {
   const [superAdmin,setSuperAdmin]=useState([]);
 
   const getUser = async () => {
-    const result = await fetch(`http://localhost:8000/get`);
+    const result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/get`);
     const res = await result.json();
     let sadmin = [];
     res && res.map((data) => {
