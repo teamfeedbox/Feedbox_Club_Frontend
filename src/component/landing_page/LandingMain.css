@@ -1,0 +1,23 @@
+.Landing-Main-Container{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF8EA;
+}
+.Landing-Main-Left{
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 255, 255, 0.17);
+}
+.Landing-Left-box{
+    width: 70%;
+    margin:25% auto 0 auto;
+
+}
+
+.Landing-Main-Right{
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 128, 0, 0.17);
+}

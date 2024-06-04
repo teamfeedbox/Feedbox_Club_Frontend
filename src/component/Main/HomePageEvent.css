@@ -1,0 +1,152 @@
+.HomePageEvent {
+    margin: 20px 0px;
+    padding: 15px;
+    /* padding-bottom: 50px; */
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    text-align: left;
+}
+.event-main-div-res {
+    display: block;
+}
+
+.upcoming_event_title {
+    font-family: "Montserrat", sans-serif;
+    font-size: var(--heading-font-size);
+    font-weight: var(--heading-font-weight);
+    margin-bottom: 15px;
+    margin-left: 10px;
+    color: #407CD4;
+}
+
+.HomePageEvent h2 {
+    font-size: 1.7rem;
+}
+
+.home-page-event-time {
+    font-family: "Poppins", sans-serif;
+    margin-top: -10px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.home-page-event-time img{
+    height: 25px;
+}
+
+.home-page-event-time-p{
+    padding-left: 10px;
+    font-size: var(--subheading-font-size);
+    font-weight: var(--subheading-font-weight);
+}
+
+.home-page-event-description {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 10px;
+    font-weight: var(--content-font-weight);
+    font-size: var(--content-font-size);
+}
+.home-page-event-button {
+    /* border: 2px solid; */
+    display: flex;
+
+}
+.home-page-event-button button {
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: var(--button-font-size);
+}
+
+.home-page-event-button-knowmore {
+    background-color: #F14785;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.home-page-event-button-knowmore:hover{
+    background-color: #464545;
+
+}
+
+.home-page-event-button-interested {
+    background: none;
+    border: 2px solid white;
+    /* font-weight: 600; */
+    transition: all 0.2s ease-in-out;
+}
+
+.home-page-event-button-interested:hover {
+    background-color: rgb(228, 225, 225);
+    border: 2px solid rgb(228, 225, 225) ;
+}
+
+.main-event-carousel {
+    display: none;
+}
+
+.main-event-carousel .carousel .thumbs-wrapper{
+    display: none;
+}
+
+.carousel .control-dots {
+    display: none;
+}
+
+.carousel.carousel-slider .control-arrow {
+    top: 0;
+    background-color: transparent;
+    color: #000;
+    font-size: 26px;
+    bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+}
+
+.carousel .control-next.control-arrow:before {
+    border-left: 8px solid #000;
+}
+.carousel .control-prev.control-arrow:before {
+    border-right: 8px solid #000;
+}
+@media only screen and (max-width: 600px) {
+    .event-main-div-res {
+        display: none;
+    }
+    .main-event-carousel {
+        display: block;
+
+    }
+    .HomePageEvent{
+        text-align: left;
+        /* border: 2px solid red; */
+        /* height: 200px; */
+    }
+    .HomePageEvent h2 {
+        font-size: 1.5rem;
+
+    }
+    .home-page-event-time {
+        margin: 8px 0px 0px 0px;
+        /* border: 2px solid; */
+
+    }
+    .home-page-event-description {
+        padding-left: 5px;
+        font-weight: 500;
+        font-size: 1rem;
+        color: blue;
+    }
+    .home-page-event-button button {
+        margin: 8px;
+        padding: 2px 12px;
+        border-radius: 25px;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+.carousel .carousel-status{
+    color: #000;
+}
+}

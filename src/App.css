@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  /* background-color: #F6F6EF; */
+}
+
+/* for firefox */
+html {
+  scrollbar-width: none;
+}
+/* for chrome, webkit browser */
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root{
+  --primary_color: #000;
+  --heading-font-size : 1.5rem;
+  --heading-font-weight: 700;
+  --subheading-font-size : 1.1rem;
+  --subheading-font-weight: 600;
+  --content-font-size : 1rem;
+  --content-font-weight : 400;
+  --subcontent-font-size : 0.8rem;
+  --subcontent-font-weight : 600;
+  --button-font-size : 1.05rem;
+  --button-font-weight : 500;
+}

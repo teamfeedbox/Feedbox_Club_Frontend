@@ -1,0 +1,21 @@
+.thumbnailImg {
+    display: flex;
+    flex-direction: column; /* Default to column layout */
+    align-items: center; /* Center items for the column layout */
+    gap: 16px; /* Adds space between items */
+  }
+  
+  @media (max-width: 768px) {
+    .thumbnailImg {
+      flex-direction: row; /* Switch to row layout on screens <= 768px */
+      justify-content: space-between; /* Spread items across the row */
+      flex-wrap: wrap; /* Allows items to wrap onto the next line if not enough space */
+    }
+  }
+  
+  .item {
+    width: 96px; /* Fixed width for each item */
+    height: 96px; /* Fixed height for each item */
+    border-radius: 999px; /* Rounded corners */
+  }
+  

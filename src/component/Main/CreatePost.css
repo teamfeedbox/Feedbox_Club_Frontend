@@ -1,0 +1,159 @@
+.CreatePost {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+}
+.Register-Page-Word-Limit{
+    font-size: 10px;
+    width: fit-content;
+   
+}
+
+.create-post-profile img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: fit;
+}
+
+.create-post-start {
+    display: flex;
+    /* border-bottom: 2px solid black; */
+    margin: auto;
+    width: 88%;
+    padding: 7px;
+    justify-content: space-between;
+    font-size: var(--content-font-size);
+    font-weight: var(--content-font-weight);
+    border-radius: 2px;
+    transition: 0.3s all linear;
+}
+
+.create-post-start:hover {
+    background-color: rgb(234, 230, 230);
+}
+
+.profile-section-overall {
+    /* height: 100%; */
+    /* margin: auto; */
+    z-index: 9999;
+}
+
+.modal-input {
+    height: 100%;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    /* border-bottom: 1px solid black; */
+    border-bottom: none;
+    font-size: var(--content-font-size);
+    font-weight: var(--content-font-weight);
+}
+
+
+.modal-body textarea:focus {
+    outline: none;
+}
+
+.modal-profile-section {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    display: flex;
+    /* border: 2px solid black; */
+}
+
+.modal-profile-section-image img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modal-profile-section-content {
+    margin-left: 10px;
+    
+}
+
+.modal-profile-section-content div{
+    font-size: var(--subheading-font-size);
+    font-weight: var(--subheading-font-weight);
+}
+
+.modal-profile-section-content select {
+    position: relative;
+    color: gray;
+    border: none;
+    /* width: 120%; */
+    top: -5px;
+    font-size: var(--content-font-size);
+    font-weight: var(--content-font-weight);
+}
+
+.modal-profile-section-content select:focus {
+    outline: none;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+.modal-footer-upload input {
+    display: none;
+}
+
+.image-chooosen-upload-overall-div {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-chooosen-upload-div {
+    display: flex;
+    /* border: 2px solid black; */
+}
+
+.fa-xmark-circle-create-post {
+    /* border: 2px solid black; */
+    position: relative;
+    left: 18px;
+    top: 5px;
+    color: white;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: black;
+    height: 14px;
+    width: 14px;
+}
+
+
+
+.image-chooosen-upload {
+    height: 100px;
+    margin: 10px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.error-text-create-post {
+    color: rgb(159, 7, 7);
+    font-size: 0.9rem;
+}
+
+.create_post_home_page {
+    font-size: var(--heading-font-size);
+    font-weight: var(--heading-font-weight);
+}
+
+@media only screen and (max-width: 600px) {
+    .CreatePost {
+        margin: 10px 0px;
+    }
+
+}

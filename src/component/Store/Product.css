@@ -1,0 +1,84 @@
+/* Product.css
+@font-face {
+  font-family: "courier-std";
+  src: url("../../../public/Courier Std/Courier Std Medium/Courier Std Medium.otf");
+}
+body {
+  background-color: #fff;
+}
+
+.product-card {
+  text-align: center;
+  background-color: transparent !important;
+  padding: 5px 5px 22px 5px;
+  height: 277.5px;
+  width: 277.5px;
+  border-radius: 12px;
+  /* margin-top: -4%;
+  margin-left: -29%; */
+  /* margin-bottom: 45.7%;
+  display: flex;
+  flex-direction: column; */
+  /* align-content: center;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  align-items: center;
+  min-height: 103%; */
+  /* border: 1px solid transparent; */
+  /* background: #fff; */
+/* }
+.product-image {
+  font-size: 1.2rem;
+  height: 110%;
+  width: 110%;
+  min-height: 110%;
+  margin-top: 50%;
+  cursor: pointer;
+  margin-bottom: 0%;
+  border: 6.5px solid transparent;
+  border-image: linear-gradient(185deg, #29abe2, #0071bc) 30;
+  background-clip: border-box;
+  box-shadow: 6px 6px 70px rgb(16 40 81 / 10%);
+}
+.product-image:hover {
+  border: 8px solid #ef5350;
+  /* border: 1px solid pinkishred:-#ef5350;    orange:-#ff3300  golden:-#ffb500 */
+  /* text-decoration: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  transform: scale(1.1);
+} */
+
+/* .product-info h5 {
+  font-size: 1.2rem !important;
+  font-family: 'courier-std', 'Open Sans', sans-serif;
+  font-family: "courier-std";
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.6;
+  padding-top: 22px;
+  margin: 1px;
+  color: #161616;
+} */
+
+/* .product-info h5:hover {
+  text-decoration: underline;
+}
+
+.product-info p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  padding-top: 8px;
+  margin: 0px;
+  color: #161616;
+} */
+
+/* .product-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+} */

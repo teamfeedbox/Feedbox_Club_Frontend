@@ -1,0 +1,142 @@
+.HomePageProfile {
+    /* border: 2px solid black; */
+    /* margin-top: 20px ; */
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin-bottom: 20px;
+}
+
+.innerDIV {
+    border: .1em dashed #9471C7;
+    border-radius: 15px;
+}
+
+.home-profile-visit-profile {
+    position: relative;
+    float: right;
+    width: fit-content;
+    margin: 10px;
+    top: -87px;
+}
+.home-profile-bg-doodle img{
+    width: 100%;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    
+}
+
+.home-profile-visit-profile-icon {
+    color: #fff;
+}
+
+.home-profile-main-info {
+    position: relative;
+    display: flex;
+    margin-top: -50px;
+    transform: translate(0%,-0%);
+}
+
+.home-profile-main-photo{
+    background-color: white;
+    border-radius: 50%;
+    /* padding:20px; */
+    /* height: 90px;
+    width: 90px; */
+    margin-top: 10px;
+    margin-left:16px;
+}
+
+.home-profile-main-photo img {
+    border-radius: 50%;
+    /* height: 90px;
+    width: 90px; */
+    min-height: 90px;
+    min-width: 90px;
+    max-height: 90px;
+    max-width: 90px;
+    /* margin: 10px; */
+    object-fit:inherit;
+} 
+
+.home-profile-name-section  {
+    margin-top: 48px;
+    margin-left: 8px;
+}
+
+.home-profile-name-section-name{
+    /* font-weight: var(--subheading-font-weight);
+    margin: auto;
+    font-size: var(--heading-font-size); */
+    font-weight: 600;
+    margin: auto;
+    font-size: 1.4em;
+}
+
+.home-profile-name-section-desig  {
+    margin-top: -5px;
+    color: #787676;
+    font-weight: var(--subheading-font-weight);
+    font-size: var(--subheading-font-size) ;
+}
+
+.home-profile-skill-div {
+    margin: 5px 5px 10px 15px;
+}
+
+.home-profile-skill-div h6 {
+    font-size: var(--subheading-font-size);
+    font-weight: var(--subheading-font-weight);
+}
+
+.home-profile-skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-profile-skills div {
+    /* border: 2px solid; */
+    margin: 5px;
+    padding: 2px 4px;
+    border-radius: 5px;
+    font-weight: var(--content-font-weight);
+    font-size: var(--content-font-size);
+} 
+
+.home-profile-coin-section{
+    /* border: 2px solid; */
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.home-profile-coins {
+    /* border: 2px solid; */
+    padding: 7px;
+    margin: 0px 20px 10px 0px;
+    border-radius: 5px;
+    background-color: #FDFFB3;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.home-profile-coins-content {
+    /* border: 2px solid; */
+    height: fit-content;
+    margin-top: 5px;
+}
+
+.home-profile-coins-content h6 {
+    /* border: 2px solid; */
+    font-size: var(--heading-font-size);
+    font-weight: var(--heading-font-weight);
+}
+
+.home-profile-coins-content div {
+    /* border: 2px solid; */
+    margin-top: -10px;
+    color: #787676;
+    font-weight: var(--content-font-weight);
+    font-size: var(--content-font-size);
+}
+
+

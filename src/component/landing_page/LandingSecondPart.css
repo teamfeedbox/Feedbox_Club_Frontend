@@ -1,0 +1,61 @@
+.landing-container{
+    padding: 0 7%;
+    overflow-x: hidden;
+}
+.landing-second-section{
+    background-color: #232234;
+    color:white;
+    padding: 5% 7% 2% 7%;
+    font-size: 25px;
+}
+.landing-second-head{
+    background-color: #232234;
+    color: #F06827;
+}
+.landing-second-con{
+    background-color: #232234;
+    padding-left: 20px;
+}
+.landing-second{
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+/* for mobile */
+@media only screen and (max-width: 480px){
+    /* Second Section */
+    .landing-second-section{
+        font-size: 17px;
+        text-align: justify;
+    }
+    .landing-second{
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+/* ----------------------------------- */
+/* Tab */
+@media only screen and (min-width: 480px) and (max-width:950px){
+    .landing-container{
+        padding: 0 7% 0 7%;
+    }
+    /* Second Section */
+    .landing-second-section{
+        background-color: #232234;
+        color:white;
+        padding: 5% 7% 2% 7%;
+        font-size: 25px;
+    }
+    .landing-second-head{
+        background-color: #232234;
+        color: #F06827;
+    }
+    .landing-second-con{
+        background-color: #232234;
+        padding-left: 20px;
+    }
+    .landing-second{
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+}

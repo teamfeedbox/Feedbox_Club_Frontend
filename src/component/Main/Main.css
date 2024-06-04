@@ -1,0 +1,171 @@
+.main_container {
+    width: 100%;
+    padding-top: 65px;
+    height: 100vh;
+    overflow-y: hidden;
+    /* padding-bottom: 200px; */
+}
+
+.main-page-display-web {
+    display: block;
+}
+
+.main-page-display-mobile {
+    display: none;
+}
+
+.main {
+    display: flex;
+    margin: auto;
+    padding: 0px 10px 250px 10px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-home-page-profile {
+    width: 22%;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.main-post-dispaly {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vh;
+}
+
+
+.main-home-page-cal {
+    overflow-y: scroll;
+    width: 24%;
+    height: 100vh;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.main-post-dispaly::-webkit-scrollbar {
+    display: none;
+}
+
+.main-home-page-cal::-webkit-scrollbar {
+    display: none;
+}
+
+.main-page-display-tab {
+    height: 100vh;
+    display: none;
+}
+
+.up-coming-events {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-size: large;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-top: 5vh;
+    background-color: #407CD4;
+    border-radius: 5px;
+    text-align: center;
+    display: inline;
+    padding: 1.5vh;
+}
+
+.main-page-display-tab {
+    height: 100%;
+}
+
+.main-page-display-tab-left {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 40%;
+    margin-left: 15px;
+}
+
+.main-page-display-tab-right {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 60%;
+}
+
+.main-page-display-tab-right::-webkit-scrollbar {
+    display: none;
+}
+
+.main-page-display-tab-left::-webkit-scrollbar {
+    display: none;
+}
+
+.main-home-page-profile::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.main-page-display-tab-right {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.main-page-display-tab-left {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.main-home-page-profile {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .main-page-display-web {
+        display: none;
+    }
+
+    .main-page-display-mobile {
+        display: none;
+    }
+
+    .main-page-display-tab {
+        display: block;
+    }
+
+    .main {
+        padding: 0;
+        /* margin: 0; */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-page-display-web {
+        display: none;
+    }
+
+    .main-page-display-mobile {
+        display: block;
+    }
+
+    .main-page-display-tab {
+        display: none;
+    }
+
+    .main {
+        flex-direction: column;
+        overflow: scroll;
+        padding: 0;
+    }
+
+    .up-coming-events {
+        margin: 0vh 10vh 0vh 10vh;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: .5vh;
+    }
+}

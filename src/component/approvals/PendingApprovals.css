@@ -1,0 +1,36 @@
+.PendingApprovals {
+    margin: 15px auto;
+    width: 80%;
+}
+
+.customizeT {
+    border: 2px dashed orange;
+    border-top: none;
+}
+
+.rowSize {
+    height: 2rem;
+}
+
+.pending-approval-td {
+    display: block;
+    position: absolute;
+}
+
+.nopending{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+    gap:10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .PendingApprovals {
+        width: 100%;
+        margin: 0px 0px;
+    }
+}

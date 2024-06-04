@@ -1,0 +1,146 @@
+.Navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #232234;
+    color: white;
+    /* overflow: hidden; */
+    position: fixed;
+    /* top: 0; */
+    width: 100%;
+    z-index: 10000000;
+}
+
+.navbar-center {
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #fff;
+    /* border: 2px solid ; */
+    margin: 20px;
+    /* padding: 0px 20px; */
+    font-size: 1.2rem;
+    transition: all 0.1s linear;
+}
+
+.navbar-link:hover {
+    color: #cfcdcc;
+    /* border-bottom: 3px solid white; */
+}
+
+.navbar-highlight {
+    background-color: white;
+    height: 2px;
+    width: 80%;
+    margin: auto;
+    /* transition: all 0.3s linear; */
+}
+
+.Navbar-left {
+    /* margin: auto; */
+    position: relative;
+    padding-top: 5px;
+    /* border: 2px solid white; */
+    left: -70px;
+}
+
+.Navbar-left img {
+    height: 60px;
+    /* border: 2px solid white; */
+}
+
+.navabar-right {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+.navabr-button {
+    margin: auto;
+    padding: 0px 30px;
+}
+
+.navabr-button button {
+    color: white;
+    background-color: #232234;
+    border: 2px solid #fff;
+    padding: 4px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.2s linear;
+}
+.cr-ptr:hover{
+    cursor: pointer;
+}
+
+.navabr-button button:hover {
+    background-color: #fff;
+    color: #232234;
+    /* border: 2px solid #0f4d25; */
+}
+
+.navabar-icon {
+    margin: auto;
+    /* padding: 0px 30px 0px 10px; */
+}
+
+.navbar-profile {
+    margin: auto;
+}
+
+.navbar-profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navabar-icon:hover {
+    color: #cfcdcc;
+}
+
+.navabr-dropdown {
+    /* border: 2px solid white; */
+    margin: auto;
+    padding: 5px;
+}
+
+.dropdown-icon {
+    font-size: 1.2rem;
+}
+
+.dropdown-content{
+    background-color: white;
+    border:1px solid rgb(202, 200, 200);
+    width:8%;
+    height:fit-content;
+    position: absolute;
+    top:60px;
+    right: 100px;
+    /* left:470px; */
+    /* text-align: left; */
+    gap:7px;
+    display:flex;
+    padding-top:15px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    cursor:pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.navbar-links{
+    text-decoration: none;
+    color: black;
+    /* margin: auto; */
+    padding-left: 7px;
+    /* border-bottom: 1px solid gray ; */
+}
+
+.dropdown-content span {
+    padding-left: 5px;
+}
+

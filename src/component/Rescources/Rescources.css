@@ -1,0 +1,84 @@
+.Rescources {
+    padding: 80px 0px 20px 0px;
+    text-align: center;
+    z-index: 1;
+}
+
+.Rescources h1 {
+    /* border: 2px solid green; */
+    margin-bottom: 20px;
+}
+
+.Rescources-overall-card {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Rescources-card {
+    /* border: 1px solid black; */
+    margin: 15px 75px 25px 15px;
+    text-decoration: none;
+    /* padding: 20px; */
+    border-radius: 10px;
+    transition: all 0.2s linear;
+    width: 18%;
+    background-color: white;
+}
+.Rescources-card:hover {
+    /* border: 1px solid black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transform: scale(1.1);
+}
+.Rescources-card-img{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+}
+.Rescources-card-img img{
+    height: 150px;
+}
+
+.Rescources-card-content {
+    /* border: 2px solid black; */
+    margin: 30px 0px 0px 0px;
+    color: #000;
+    padding: 10px;
+    font-size: var(--subheading-font-size);
+    font-weight: var(--subheading-font-weight);
+    border-radius: 10px;
+}
+@media only screen and (max-width: 1000px) {
+    .Rescources-card {
+        margin: 10px 2px;
+        padding: 20px 10px;
+        width: 30%;
+    }
+    .Rescources-card-img img{
+        height: 100px;
+        width: fit-content;
+    }
+    .Rescources-card:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Rescources-card {
+        margin: 10px 2px;
+        padding: 20px 10px;
+        width: 45%;
+    }
+    .Rescources-card-img img{
+        height: 80px;
+        width: fit-content;
+    }
+    .Rescources-card:hover {
+        /* border: 1px solid black; */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        transform: scale(1);
+    }
+}

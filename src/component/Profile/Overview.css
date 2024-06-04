@@ -1,0 +1,590 @@
+.Overview-Container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 0px 30px;
+    
+}
+.Overview-Left{
+    width: 50%;
+}
+.Overview-Left-input{
+    margin-bottom: 30px;
+    width: 100%;
+    border: 2px solid green;
+    padding: 2px 2px 2px 4px;
+}
+.Overview-Left-input1{
+    margin-bottom: 0;
+}
+
+.Overview-Left-P{
+    margin-bottom: 30px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.Overview-Detail section{
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 25px 0;
+}
+.Overview-Detail section p{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+.Detail-icon1{
+  background-color:#C5F1C2;
+  color: #018E0E;
+  width:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  font-size: 30px;
+  margin-right: 10px;
+  border-radius: 8px;
+  padding:5px 10px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+}
+
+.Detail-icon2{
+    background-color:#C2DBF0;
+    color: #132F96;
+    width:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-size: 30px;
+    margin-right: 10px;
+    border-radius: 8px;
+    padding:5px 10px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+  }
+
+  .Detail-icon3{
+    background-color:#F0C3E0;
+    color: #900368;
+    width:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-size: 30px;
+    margin-right: 10px;
+    border-radius: 8px;
+    padding:5px 10px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+  }
+
+  .Detail-icon4{
+    background-color:#F0E1C2;
+    color: #A3660C;
+    width:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-size: 30px;
+    margin-right: 10px;
+    border-radius: 8px;
+    padding:5px 10px 5px 10px;box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+    }
+    .Detail-icon5{
+        background-color:#FDFFB3;
+        color: #FFE28F;
+        width:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        font-size: 30px;
+        margin-right: 10px;
+        border-radius: 8px;
+        padding:5px 10px 5px 10px;box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+        
+    }
+    .Detail-icons5 img{
+        margin:0 auto;
+    }
+    .Detail-icon6{
+        background-color:#B2DAFF;
+        color: #0039FE;
+        width:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        font-size: 30px;
+        margin-right: 10px;
+        border-radius: 8px;
+        padding:5px 10px 5px 10px;box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+    }
+
+    /* Skills */
+    .Overview-Skills{
+        font-size: 25px;
+        font-weight: 450;
+        /* border: 1px solid black; */
+    }
+    .Skills-Title{
+        margin:0 0 15px 0;
+        padding:0 0 0 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .Overview-Sub-Skills{
+        display: flex;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        /* border: 1px solid red; */
+    }
+    .Skills{
+        padding: 10px 15px;
+        background-color: #44e0b65d;
+        margin: 10px 10px 0 0px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .Skills:hover{
+      background-color: #44e0b696;  
+    }
+
+    .save-btn{
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+.Overview-Right{
+    width: 50%;
+    transform: translateX(10%);
+}
+.Overview-Right-Statistics{
+    padding:5px 10px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+    border-radius: 10px;
+    margin: 0px 0 20px 0;
+    padding: 10px 20px 20px 20px;
+    width: 90%;
+}
+.Overview-Right-Statistics section{
+    display: flex;
+    flex-direction: row;
+}
+.Overview-Right-Statistics h5{
+    padding: 0 0 0 0;
+    margin: 0px 0 15px 0;
+}
+.statistics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Right-Sub span{
+    font-size: 20px;
+}
+.Right-Sub p{
+    font-size: 18px;
+    padding: 0 0 0 0;
+    margin:  0 0 0 0;
+}
+section span{
+    font-weight: 700; 
+}
+/* Enrolled Sessions */
+.Overview-Right-Statistics1{
+    border:1px solid #c3c3c2;
+}
+h5 div{
+    border-top: 2px solid #C3C3C2;
+    margin: 10px 0;
+}
+.Sessions-Section{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #c3c3c2;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin:10px 15px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.24) .5px 3px 4px;
+    border: 1px solid #c3c3c2;
+    text-align: center;
+    font-weight: 500;
+    height: 100px;
+    justify-content: center;
+    cursor: pointer;
+}
+.Sessions-Section:hover{
+    border: 1px solid black;
+}
+.Add-Event{
+    height: fit-content;
+    padding: 6px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 4px 1.5px;
+    /* margin: auto 0; */
+    margin-top: 13px;
+    font-size: 15px;
+    color: #0a57cada;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Add-Event1{
+    height: fit-content;
+    padding: 6px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 4px 1.5px;
+    margin: auto 0;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Add-Event1:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 6px 2.3px;
+}
+.Enrolled-Section{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.Add-Event-Cont{
+    height: 50px;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+}
+.Add-Event:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 6px 2.3px;
+}
+
+
+/* Edit Profile Pop up */
+/* ################################ */
+/* ################################ */
+.Edit-Profile-Model-container{
+    z-index: 10;
+    position: fixed;
+    overflow-y: hidden;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+}
+.Edit-Post-Model-Close{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d9e;
+    display: flex;
+    /* justify-content: center; */
+    position: relative;
+}
+.input-model{
+    background-color: #fff;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+.input-model-line{
+    border-top: 2px solid rgba(185, 182, 182, 0.731);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.input-Section input{
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+}
+
+.input-Section button{
+    background-color: #c3c3c27d;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+    padding: 2px 2px 2px 2px;
+}
+.input-Section button:hover{
+    background-color: #C3C3C2;
+}
+
+.Profile-Edit-Mail{
+    display: flex;
+    flex-direction:row;
+}
+.Profile-Edit-Mail button{
+    /* style={{backgroundColor:"green",color:"white",margin:"0 0 20px 0",padding:"7px 25px",borderRadius:"10px"}} */
+    background-color: #018E0E;
+    color: #fff;
+    padding:5px 20px 5px 20px;
+    height: 40px;
+    margin:  5% 0 0 30px;
+    border-radius: 10px;
+}
+
+.Edit-Post-Model-Form{
+    /* width: 50%; */
+}
+
+.Edit-Profile-Form{
+    /* height: fit-content; */
+}
+.input-model {
+    margin-top: 4.4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+    .Overview-Container{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0px 0px 0px 0px;
+    }
+    .Overview-Left{
+        width: 100%;
+    }
+    .Overview-Left-P{
+        width: 90%;
+        margin: 30px auto 20px auto;
+        text-align: justify;
+        font-size: 15px;
+    }
+    .Overview-Detail{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+    .Detail-icon1{
+      width:50px;
+      font-size: 25px;
+    }
+    .Detail-icon2{
+        width:50px;
+        font-size: 25px;
+      }
+      .Detail-icon3{
+        width:50px;
+        font-size: 25px;
+      }
+      .Detail-icon4{
+        width:50px;
+        font-size: 25px;
+        }
+        .Detail-icon5{
+         width:80px;
+         margin: 0 10px 0 0;    
+        }
+        .Detail-icon6{
+         width:80px;
+         margin: 0 10px 0 0;   
+        }
+        /* Skills */
+        .Overview-Skills{
+            font-size: 20px;
+            font-weight: 450;
+            width: 90%;
+            margin: 0 auto;
+            
+            
+        }
+        .Skills-Title{
+            margin: 0 0 0 0;
+        }
+        .Skills{
+            font-size: 14px;
+        }
+    .Overview-Right{
+        width: 100%;
+        transform: translateX(0%);
+        margin: 0 auto;
+    }
+    .Overview-Right-Statistics{
+        padding:5px 10px 5px 10px;
+        margin: 20px auto 20px auto;
+        padding: 10px 20px 20px 20px;
+        width: 90%;
+    }
+    .Overview-Right-Statistics section{
+        display: flex;
+        flex-direction: row;
+    }
+    .Overview-Right-Statistics h5{
+        font-size: 17px;
+    }
+    .Enrolled-Section{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .Add-Event-Cont{
+        height: 75px;
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
+    }
+    .Add-Event1{
+        height: fit-content;
+        padding: 6px 8px;
+        margin: auto 0;
+        font-size: 15px;
+    }
+    .Right-Sub span{
+        font-size: 16px;
+    }
+    .Right-Sub p{
+        font-size: 15px;
+    }
+    section span{
+        font-weight: 700; 
+    }
+    /* Enrolled Sessions */
+    .Overview-Right-Statistics1{
+        border:1px solid #c3c3c2;
+    }
+    .Sessions-Section{
+        margin: 10px 10px 0px 0;
+        font-size: 13px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Add-Event{
+        height: fit-content;
+        padding: 6px 8px;
+        margin: auto 0;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width:992px) {
+    .Overview-Container{
+        padding: 0px 0px;
+    }
+    .Overview-Left{
+        width: 45%;
+    }
+    .Overview-Detail section{
+        margin: 0 0 20px 0;
+    }
+    .Detail-icon1{
+      font-size: 25px;
+      width:55px;
+    }
+    .Detail-icon2{
+      font-size: 25px;
+      width:55px
+    }
+    .Detail-icon3{
+      font-size: 25px;
+      width:55px
+    }
+    .Detail-icon4{
+      font-size: 25px;
+      width:55px
+    }
+        .Detail-icon5{
+            width:60px;
+            font-size: 0px;
+            margin-right: 5px;
+            padding:4px 8px 4px 8px;
+            
+        }
+        .Detail-icons5 img{
+            margin:0 auto;
+        }
+        .Detail-icon6{
+            background-color:#B2DAFF;
+            color: #0039FE;
+            width:60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            font-size: 30px;
+            margin-right: 10px;
+            border-radius: 8px;
+            padding:5px 10px 5px 10px;box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+        }
+    
+        /* Skills */
+        .Overview-Skills{
+            font-size: 25px;
+            font-weight: 450;
+        }
+        .Skills-Title{
+            margin:0 0 15px 0;
+            padding:0 0 0 0;
+        }
+        .Overview-Sub-Skills{
+            display: flex;
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .Skills{
+            padding: 10px 15px;
+            background-color: #44e0b65d;
+            margin: 10px 10px 0 0px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 490;
+        }
+        .Skills:hover{
+          background-color: #44e0b696;  
+        }
+    .Overview-Right{
+        width: 55%;
+        transform: translateX(5%);
+    }
+    .Overview-Right-Statistics{
+        padding:5px 10px 5px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+        border-radius: 10px;
+        margin: 0px 0 20px 0;
+        padding: 10px 10px 20px 10px;
+        width: 95%;
+    }
+    .Overview-Right-Statistics section{
+        display: flex;
+        flex-direction: row;
+    }
+    .Overview-Right-Statistics h5{
+        margin: 0px 0 15px 0;
+        font-size: 17px;
+    }
+    .Right-Sub span{
+        font-size: 17px;
+    }
+    .Right-Sub p{
+        font-size: 17px;
+    }
+    /* Enrolled Sessions */
+    .Sessions-Section{
+        padding: 5px 10px;
+        margin-right: 10px;
+        height: 95px;
+    }
+    .Add-Event{
+        height: fit-content;
+        padding: 6px 8px;
+        box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 4px 1.5px;
+        margin: auto 0;
+        font-size: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .Add-Event1{
+        padding: 6px 8px;
+        margin: auto 0;
+        font-size: 15px;
+    }
+    .Add-Event-Cont{
+        height: 60px;
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
+    }
+    .Add-Event:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 6px 2.3px;
+    }
+
+}
