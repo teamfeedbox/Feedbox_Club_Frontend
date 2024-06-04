@@ -25,7 +25,7 @@ const ProfileEvent = () => {
 
   const getEvent = async () => {
     setLoading1(true);
-    let result = await fetch("http://localhost:8000/myEvent", {
+    let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/myEvent", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
