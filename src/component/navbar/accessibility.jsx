@@ -94,7 +94,7 @@ export function Accessibility(props) {
   // const [role, setRole] = useState();
 
   const getNotifications = async () => {
-    let notifi = await fetch(`http://localhost:8000/getNotifications`, {
+    let notifi = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getNotifications`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
