@@ -10,7 +10,7 @@ const App = () => {
 	useEffect(() => {
 		const fetchProducts = async () => {
 			const allProducts = await fetch(
-				`http://localhost:8000/merchandise/getallproducts`
+				`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/merchandise/getallproducts`
 			);
 			const data = await allProducts.json();
 			setProducts(data);
