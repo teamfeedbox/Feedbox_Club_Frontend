@@ -466,7 +466,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
   }, [id, loading]);
 
   const getPost = async () => {
-    let result = await fetch(`http://localhost:8000/userPost/${id}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/userPost/${id}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -482,7 +482,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
       setImg(currentUser.img);
       return;
     }
-    let result = await fetch(`http://localhost:8000/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -493,7 +493,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
 
   const updateComment = () => {
     console.log(id, "", message);
-    fetch("http://localhost:8000/comment", {
+    fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -514,7 +514,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
 
   const updateReply = () => {
     console.log(commentId, "", replyMsg);
-    fetch(`http://localhost:8000/reply/${commentId}`, {
+    fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/reply/${commentId}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -543,7 +543,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
   const deleteComment = async (deleteComId) => {
     console.log(deleteComId, " ", id);
     let result = await fetch(
-      `http://localhost:8000/commentDel/${deleteComId}`,
+      `https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/commentDel/${deleteComId}`,
       {
         method: "put",
         headers: {
@@ -567,7 +567,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
 
   const deleteReply = async (replyId) => {
     console.log(replyId, " ", id);
-    let result = await fetch(`http://localhost:8000/replyDel/${replyId}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/replyDel/${replyId}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
