@@ -14,7 +14,7 @@ const LoginPage = () => {
     // setLoading(true);
     e.preventDefault();
 
-    let result = await fetch("http://localhost:8000/login/superAdmin", {
+    let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/login/superAdmin", {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: {
