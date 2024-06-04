@@ -26,7 +26,7 @@ const Admin = (props) => {
   const getUser = async () => {
     setLoading3(true);
     try {
-      const result = await fetch(`http://localhost:8000/get`);
+      const result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/get`);
       const res = await result.json();
       const admin = res.filter((data) => data.role === "Admin").reverse();
 
@@ -85,7 +85,7 @@ const Admin = (props) => {
 
   const handleDeleteAdmin = async () => {
     setLoading(true);
-    const data = await fetch(`http://localhost:8000/updateDetail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/updateDetail/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: "Club_Member" }),
@@ -95,7 +95,7 @@ const Admin = (props) => {
     setDelShow(false);
 
     //  notification
-    await fetch("http://localhost:8000/addNotifications", {
+    await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/addNotifications", {
       method: "post",
       body: JSON.stringify({
         message: `Now You are degraded Admin to Club Member, please login again`,
