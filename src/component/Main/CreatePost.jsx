@@ -142,7 +142,7 @@ const CreatePost = (props) => {
       }
     }
 
-    const data = fetch("http://localhost:8000/create-post", {
+    const data = fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/create-post", {
       method: "post",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
