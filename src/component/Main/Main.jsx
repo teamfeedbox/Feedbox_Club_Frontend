@@ -6,7 +6,7 @@ import HomePageEvent from "./HomePageEvent";
 import CreatePost from "./CreatePost";
 import "./Main.css";
 
-const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+const REACT_APP_BASE_URL = "https://club-community-feedbox-fork-plum.vercel.app/";
 
 const Main = () => {
   const [clg, setClg] = useState();
