@@ -82,7 +82,7 @@ const ProductForm = () => {
         fdata.append("quantity", quantity);
         fdata.append("price", price);
 
-        const response = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/merchandise/createproduct`, {
+        const response = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/merchandise/createproduct`, {
             method: "POST",
             body: fdata,
             headers: {
