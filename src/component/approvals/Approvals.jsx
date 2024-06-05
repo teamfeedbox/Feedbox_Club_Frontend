@@ -29,7 +29,7 @@ const Approvals = () => {
       val=colleges;
     }
     else{
-      const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/colleges/get`);
+      const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/colleges/get`);
       const res = await data.json();
       res.map((data) => {
         val.push(data.name);
