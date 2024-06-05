@@ -23,7 +23,7 @@ const Colleges = () => {
   // Get all Colleges
   const getColleges = async () => {
     setLoading2(true);
-    const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/colleges/get`);
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/colleges/get`);
     const res = await data.json();
     setAllClgs(res);
     setLoading2(false);
@@ -41,7 +41,7 @@ const Colleges = () => {
       let val = {
         name: addclg,
       };
-      let data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/college/add`, {
+      let data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/college/add`, {
         method: "POST",
         body: JSON.stringify(val),
         headers: {
@@ -67,7 +67,7 @@ const Colleges = () => {
 
   const handleUpdateClg = async (index, id) => {
     setClicked(index);
-    const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/college/update/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/college/update/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
