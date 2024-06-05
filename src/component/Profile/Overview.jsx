@@ -82,7 +82,7 @@ function Overview(props) {
       setData(currentUser);
       return;
     }
-    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -99,7 +99,7 @@ function Overview(props) {
 
   const updateSkills = async (userId) => {
     setLoading(true);
-    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/updateDetail/${userId}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${userId}`, {
       method: "put",
       body: JSON.stringify({ skills }),
       headers: {
