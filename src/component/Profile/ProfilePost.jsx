@@ -47,7 +47,7 @@ const ProfilePost = (prop) => {
 
   const myPost = async () => {
     setLoading2(true);
-    let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/myPost", {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/myPost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -61,7 +61,7 @@ const ProfilePost = (prop) => {
 
   const deletePost = async(id)=>{
     // console.log(id)
-    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/deletePost/${id}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/deletePost/${id}`, {
       method: "delete",
     });
 
@@ -76,7 +76,7 @@ const ProfilePost = (prop) => {
  
 
   const getUser = async () => {
-    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -89,7 +89,7 @@ const ProfilePost = (prop) => {
 
   // Like a post
   const like = (id) => {
-    fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/like", {
+    fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/like`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -118,7 +118,7 @@ const ProfilePost = (prop) => {
 
   // Unlike a Post
   const unlike = (id) => {
-    fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/unlike", {
+    fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/unlike`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
