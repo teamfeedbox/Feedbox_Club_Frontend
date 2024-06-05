@@ -46,7 +46,7 @@ const App = () => {
   };
 
   const handleClick = async () => {
-    let result = await fetch(`${process.env.BASE_URL_MAIN}/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app//user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -62,7 +62,7 @@ const App = () => {
   // Get all Colleges***
   const getColleges = async () => {
     if (!colleges) {
-      const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/colleges/get`);
+      const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/colleges/get`);
       const res = await data.json();
       let val = [];
       res.map((data) => {
@@ -78,7 +78,7 @@ const App = () => {
   // Get a user***
   const getUser = async () => {
     if (!currentUser) {
-      let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/user`, {
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },
@@ -98,7 +98,7 @@ const App = () => {
   // Get All Events***
   const getAllEvents = async () => {
     if (!allEventsData) {
-      let res = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getAllEvent");
+      let res = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent`);
       res = await res.json();
       dispatch({
         type: "INIT_ALL_EVENT",
