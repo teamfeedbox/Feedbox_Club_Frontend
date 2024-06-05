@@ -239,7 +239,7 @@ const [isLoadingEvents, setIsLoadingEvents] = useState(false);
   //   if (allUsers) {
   //     setUser(allUsers);
   //   } else {
-  //     let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/get");
+  //     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app//get");
   //     result = await result.json();
   //     let array = [];
   //     // result.map((data) => {
@@ -272,7 +272,7 @@ const [isLoadingEvents, setIsLoadingEvents] = useState(false);
       if (allUsers) {
         result = allUsers;
       } else {
-        const response = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/get");
+        const response = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/get`);
         result = await response.json();
         if (response.ok) {
           let array = result.filter(data =>
@@ -298,7 +298,7 @@ const [isLoadingEvents, setIsLoadingEvents] = useState(false);
   const getColleges = async () => {
     if (!colleges) {
       console.log("collegeeegegegege-------");
-      const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/colleges/get`);
+      const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/colleges/get`);
       const res = await data.json();
       // let val = [];
       // res.map((data) => {
@@ -323,7 +323,7 @@ const [isLoadingEvents, setIsLoadingEvents] = useState(false);
     if (allEventsData) {
       res = allEventsData;
     } else {
-      let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getAllEvent");
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent`);
       res = await result.json();
     }
     // await e.preventDefault();
