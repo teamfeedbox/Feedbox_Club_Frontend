@@ -52,7 +52,7 @@ const AttendanceSheet = () => {
   }, [loading]);
 
   const getEvent = async () => {
-    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getEvent/${eventId}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getEvent/${eventId}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -116,7 +116,7 @@ const AttendanceSheet = () => {
 
       // delete absentee from events attendance array
       let result = await fetch(
-        `https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/update/event/${currentEvent._id}`,
+        `https://club-community-feedbox2-0-sdcn.vercel.app/update/event/${currentEvent._id}`,
         {
           method: "PUT",
           body: JSON.stringify({ absentees, eventDuration }),
@@ -133,7 +133,7 @@ const AttendanceSheet = () => {
       // console.log(eventDuration);
 
       // update users coins and events aaray
-      let userData = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/update/coins/events`, {
+      let userData = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/update/coins/events`, {
         method: "PUT",
         body: JSON.stringify({ attendees, currentEvent }),
         headers: {
@@ -147,7 +147,7 @@ const AttendanceSheet = () => {
 
       // notifications
       attendees.map(async (val) => {
-        await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/addNotifications", {
+        await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
           method: "post",
           body: JSON.stringify({
             message: "Congrats! +10 coins added.",
