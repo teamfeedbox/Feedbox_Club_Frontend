@@ -33,7 +33,7 @@ const Leads = (props) => {
   const getUser = async () => {
     setLoading3(true);
     try {
-      const result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/get`);
+      const result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/get`);
       const res = await result.json();
       const lead = res.filter((data) => data.role === "Lead").reverse();
 
@@ -93,7 +93,7 @@ const Leads = (props) => {
   // submit handler for making club member as lead
   const submitHandler = async () => {
     setLoading(true);
-    const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/updateDetail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: "Admin", position: position }),
@@ -102,7 +102,7 @@ const Leads = (props) => {
     console.log(res);
 
     //  notification
-    await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/addNotifications", {
+    await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
       method: "post",
       body: JSON.stringify({
         message: `Congrats: Now You are upgraded Lead to Admin, please login again`,
@@ -123,7 +123,7 @@ const Leads = (props) => {
   };
 
   const handleDeleteAdmin = async () => {
-    const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/updateDetail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: "Club_Member" }),
@@ -134,7 +134,7 @@ const Leads = (props) => {
     setLoading(true);
 
     //  notification
-    await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/addNotifications", {
+    await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
       method: "post",
       body: JSON.stringify({
         message: `Now You are degraded Admin to Club Member, please login again`,
