@@ -6,7 +6,7 @@ const MobileNotification = () => {
     const [currentUserId, setcurrentUserId] = useState()
 
     const getData = async () => {
-        let notifi = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getNotifications`, {
+        let notifi = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getNotifications`, {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("jwt"),
             },
