@@ -20,7 +20,7 @@ const NewLogin = () => {
     e.preventDefault();
     console.log(email, password);
 
-    let result = await fetch(`https://club-community-feedbox-fork-plum.vercel.app/login`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/login`, {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: {
@@ -39,7 +39,7 @@ const NewLogin = () => {
     setLoading(false);
 
     // set notification length
-    let notifi = await fetch(`https://club-community-feedbox-fork-plum.vercel.app/getNotifications`, {
+    let notifi = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getNotifications`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
