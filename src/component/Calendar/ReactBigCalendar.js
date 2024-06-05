@@ -94,7 +94,7 @@ export default function ReactBigCalendar() {
     if (currentUser) {
       setUser(currentUser);
     } else {
-      let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/user`, {
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },
@@ -142,7 +142,7 @@ export default function ReactBigCalendar() {
 
   // Get all Colleges
   const getColleges = async () => {
-    const data = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/colleges/get`);
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/colleges/get`);
     const res = await data.json();
     let val = [];
     res.map((data) => {
@@ -159,7 +159,7 @@ export default function ReactBigCalendar() {
     } else {
       console.log("lojihihi");
       setInfinite(false);
-      result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/getAllEvent");
+      result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent`);
       result = await result.json();
       dispatch({
         type: "INIT_ALL_EVENT",
@@ -230,7 +230,7 @@ export default function ReactBigCalendar() {
 
   // Mark Interested
   const attendanceUpdate = async (eveid) => {
-    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/updateEvent/${eveid}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateEvent/${eveid}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -255,7 +255,7 @@ export default function ReactBigCalendar() {
     });
 
     let data = await fetch(
-      `https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/update/interested/events/${id}`,
+      `https://club-community-feedbox2-0-sdcn.vercel.app/update/interested/events/${id}`,
       {
         method: "PUT",
         headers: {
@@ -305,7 +305,7 @@ export default function ReactBigCalendar() {
     console.log(val, "val");
     e.preventDefault();
     toast.dark("Event Created Successfully!");
-    let result = await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/createEvent", {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/createEvent`, {
       method: "post",
       body: JSON.stringify(val),
       headers: {
@@ -336,7 +336,7 @@ export default function ReactBigCalendar() {
     setAddEventModel(false);
 
     //  notification
-    await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/addNotifications", {
+    await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
       method: "post",
       body: JSON.stringify({
         message: ` Alert: Join ${title} on ${eventDate} ${eventTime} at ${venue}`,
@@ -391,7 +391,7 @@ export default function ReactBigCalendar() {
   // Delete Event
   const cancelEvent = async (id) => {
     setLoading2(true);
-    let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/deleteEvent/${id}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/deleteEvent/${id}`, {
       method: "delete",
     });
     result = await result.json();
@@ -400,7 +400,7 @@ export default function ReactBigCalendar() {
     setPreEventModel(false);
 
     //  notification
-    //  await fetch("https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app//addNotifications", {
+    //  await fetch("https://club-community-feedbox2-0-sdcn.vercel.app///addNotifications", {
     //   method: "post",
     //   body: JSON.stringify({
     //     message: ` Alert: ${title} has been cancelled`,
