@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Faq.css";
 import NavbarRes from "./navbar/NavbarRes";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 const faqs = [
   {
     id: "Q1",
