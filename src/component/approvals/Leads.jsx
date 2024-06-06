@@ -2,7 +2,7 @@ import { faSearch, faTrash, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import "./PendingApprovals.css";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import Modal from "react-bootstrap/Modal";
 import "./ClubMember.css";
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ const Leads = (props) => {
   const getUser = async () => {
     setLoading3(true);
     try {
-      const result = await fetch(`http://localhost:8000/get`);
+      const result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/get`);
       const res = await result.json();
       const lead = res.filter((data) => data.role === "Lead").reverse();
 
@@ -93,7 +93,7 @@ const Leads = (props) => {
   // submit handler for making club member as lead
   const submitHandler = async () => {
     setLoading(true);
-    const data = await fetch(`http://localhost:8000/updateDetail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: "Admin", position: position }),
@@ -102,7 +102,7 @@ const Leads = (props) => {
     console.log(res);
 
     //  notification
-    await fetch("http://localhost:8000/addNotifications", {
+    await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
       method: "post",
       body: JSON.stringify({
         message: `Congrats: Now You are upgraded Lead to Admin, please login again`,
@@ -123,7 +123,7 @@ const Leads = (props) => {
   };
 
   const handleDeleteAdmin = async () => {
-    const data = await fetch(`http://localhost:8000/updateDetail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: "Club_Member" }),
@@ -134,7 +134,7 @@ const Leads = (props) => {
     setLoading(true);
 
     //  notification
-    await fetch("http://localhost:8000/addNotifications", {
+    await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
       method: "post",
       body: JSON.stringify({
         message: `Now You are degraded Admin to Club Member, please login again`,
@@ -175,7 +175,7 @@ const Leads = (props) => {
             <tbody class="text-sm divide-y divide-gray-100 max-w-[1150px]">
               {loading3 ? (
                 <div
-                  class="spinner-border text-blue"
+                  className="spinner-border text-blue"
                   role="status"
                   style={{
                     height: "35px",
@@ -184,79 +184,59 @@ const Leads = (props) => {
                     marginLeft: "75px",
                   }}
                 >
-                  <span class="visually-hidden">Loading...</span>
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               ) : lead.length > 0 ? (
                 lead.map((member) => (
-                  <tr className="flex justify-between max-w-[1150px]">
-                    <td class="p-2 w-[200px]  lg:w-[300px]">
+                  <tr key={member._id} className="flex justify-between max-w-[1150px]">
+                    <td className="p-2 w-[200px]  lg:w-[300px]">
                       <div className="flex items-center">
                         <img
-                          class="rounded-full w-[40px] h-[40px] object-center"
+                          className="rounded-full w-[40px] h-[40px] object-center"
                           src={member.img}
                           width="40"
                           height="40"
                           alt="Alex Shatov"
                         />
-                        {
-                          role==="Super_Admin" || role=== "Admin" ?
-                          <Link
-                          className="link-to-profile"
-                          to="/profile"
-                          state={member}
-                        >
+                        {(role === "Super_Admin" || role === "Admin") ? (
+                          <Link className="link-to-profile" to="/profile" state={member}>
+                            <div className="ml-1  text-[.8rem] md:text-[1rem]  lg:text-[1.05rem]  font-[400]">
+                              {member.name}
+                            </div>
+                          </Link>
+                        ) : (
                           <div className="ml-1  text-[.8rem] md:text-[1rem]  lg:text-[1.05rem]  font-[400]">
-                            {" "}
                             {member.name}
                           </div>
-                        </Link>
-                        :
-                        <div className="ml-1  text-[.8rem] md:text-[1rem]  lg:text-[1.05rem]  font-[400]">
-                            {" "}
-                            {member.name}
-                          </div>
-                        }
-                        
+                        )}
                       </div>
                     </td>
-                    <td class="p-2 lg:flex items-left  hidden md:block  w-[12%]">
-                      <div class=" text-gray-800 text-[1rem] font-[400]">
-                        {member.position}
-                      </div>
+                    <td className="p-2 lg:flex items-left hidden md:block w-[12%]">
+                      <div className="text-gray-800 text-[1rem] font-[400]">{member.position}</div>
                     </td>
-                    {(role && role === "Admin") ||
-                    (role && role === "Super_Admin") ? (
-                      <td class="pt-2 pb-2 flex justify-end ">
-                        <div className="flex items-center font-medium lg:gap-3 justify-start mr-6 md:mr-6 lg:mr-6 2xl:-mr-4  w-fit">
+                    {(role === "Admin" || role === "Super_Admin") ? (
+                      <td className="pt-2 pb-2 flex justify-end">
+                        <div className="flex items-center font-medium lg:gap-3 justify-start mr-6 md:mr-6 lg:mr-6 2xl:-mr-4 w-fit">
                           <button
                             onClick={() => {
                               setId(member._id);
                               handleShow();
                             }}
-                            className="h-[25px] py-3 flex items-center px-3 rounded-xl text-white bg-[#00D22E] text-[.8rem] md:text-[1rem]  lg:text-[1.05rem]  font-[500] hover:bg-[#03821f]"
+                            className="h-[25px] py-3 flex items-center px-3 rounded-xl text-white bg-[#00D22E] text-[.8rem] md:text-[1rem] lg:text-[1.05rem] font-[500] hover:bg-[#03821f]"
                           >
                             <FontAwesomeIcon icon={faUser} className="mr-2" />
                             Make Admin
                           </button>
                         </div>
 
-                        <Modal
-                          show={show}
-                          onHide={handleClose}
-                          className="club-member-modal"
-                        >
+                        <Modal show={show} onHide={handleClose} className="club-member-modal">
                           <form>
-                            <Modal.Header
-                              closeButton
-                              className="club-member-modal-header"
-                            >
-                              Are you sure to make this lead as admin ?
+                            <Modal.Header closeButton className="club-member-modal-header">
+                              Are you sure to make this lead as admin?
                             </Modal.Header>
                             <Modal.Footer className="modal-footer club-member-modal-footer">
                               <div className="modal-footer-club-member-yes-no-div">
-                                <div onClick={() => setConfirm(!confirm)}>
-                                  Yes
-                                </div>
+                                <div onClick={() => setConfirm(!confirm)}>Yes</div>
                                 <button
                                   onClick={(e) => {
                                     e.preventDefault();
@@ -274,15 +254,13 @@ const Leads = (props) => {
                                       type="text"
                                       placeholder="Specify Position"
                                       required
-                                      onChange={(e) =>
-                                        setPosition(e.target.value)
-                                      }
+                                      onChange={(e) => setPosition(e.target.value)}
                                     />
                                   </div>
                                   <div>
                                     {loading ? (
                                       <div
-                                        class="spinner-border text-blue"
+                                        className="spinner-border text-blue"
                                         role="status"
                                         style={{
                                           height: "15px",
@@ -291,9 +269,7 @@ const Leads = (props) => {
                                           marginLeft: "80px",
                                         }}
                                       >
-                                        <span class="visually-hidden">
-                                          Loading...
-                                        </span>
+                                        <span className="visually-hidden">Loading...</span>
                                       </div>
                                     ) : (
                                       <button
@@ -314,17 +290,10 @@ const Leads = (props) => {
                           </form>
                         </Modal>
 
-                        <Modal
-                          show={delshow}
-                          onHide={handleDelClose}
-                          className="club-member-modal"
-                        >
+                        <Modal show={delshow} onHide={handleDelClose} className="club-member-modal">
                           <form>
-                            <Modal.Header
-                              closeButton
-                              className="club-member-modal-header"
-                            >
-                              Are you sure to make this Lead as Club Member ?
+                            <Modal.Header closeButton className="club-member-modal-header">
+                              Are you sure to make this Lead as Club Member?
                             </Modal.Header>
                             <Modal.Footer className="modal-footer club-member-modal-footer">
                               <div className="modal-footer-club-member-yes-no-div">
@@ -343,39 +312,33 @@ const Leads = (props) => {
                         </Modal>
                       </td>
                     ) : (
-                      ""
+                      <td className="p-2 lg:flex items-center md:block w-[17%] mr-10">
+                        <div className="text-gray-800 text-[1rem] font-[400]">{member.branch}</div>
+                      </td>
                     )}
-                    {(role && role === "Admin") ||
-                    (role && role === "Super_Admin") ? (
-                      <td className=" my-auto " style={{ marginRight: "10px" }}>
-                        <div className="">
+                    {(role === "Admin" || role === "Super_Admin") ? (
+                      <td className="my-auto" style={{ marginRight: "10px" }}>
+                        <div>
                           <button
                             onClick={() => {
                               setId(member._id);
                               handleDelShow();
                             }}
-                            className="h-[25px] py-3 flex items-center px-3 rounded-xl text-white bg-[#ff0000]  text-[.8rem] md:text-[1rem]  lg:text-[1.05rem] font-[500] hover:bg-[#bf1004]"
+                            className="h-[25px] py-3 flex items-center px-3 rounded-xl text-white bg-[#ff0000] text-[.8rem] md:text-[1rem] lg:text-[1.05rem] font-[500] hover:bg-[#bf1004]"
                           >
                             Delete
                           </button>
                         </div>
                       </td>
-                    ) : (
-                      <td class="p-2 lg:flex items-center  md:block  w-[17%] mr-10">
-                        <div class=" text-gray-800 text-[1rem] font-[400]">
-                          {member.branch}
-                        </div>
-                      </td>
-                    )}
+                    ) : null}
                   </tr>
                 ))
               ) : (
                 <div className="nopending">
-                  <div className="text-[1rem] font-[400]">
-                    No Lead Members !!
-                  </div>
+                  <div className="text-[1rem] font-[400]">No Lead Members !!</div>
                 </div>
               )}
+
             </tbody>
           </table>
         </Scrollbars>

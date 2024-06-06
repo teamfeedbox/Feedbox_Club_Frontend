@@ -70,7 +70,7 @@ const PostDisplay = (props) => {
       // console.log(allPosts, "alllPiskjdihd");
       result = allPosts;
     } else {
-      let res = await fetch("http://localhost:8000/getAllPost", {
+      let res = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllPost", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },
@@ -144,7 +144,7 @@ const PostDisplay = (props) => {
 
   // Like a post
   const like = debounce( (id, index) => {
-    fetch("http://localhost:8000/like", {
+    fetch("https://club-community-feedbox2-0-sdcn.vercel.app/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -176,7 +176,7 @@ const PostDisplay = (props) => {
 
   // Unlike a Post
   const unlike = debounce((id) => {
-    fetch("http://localhost:8000/unlike", {
+    fetch("https://club-community-feedbox2-0-sdcn.vercel.app/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -211,7 +211,7 @@ const PostDisplay = (props) => {
   }
 
   const postDelete = async (Id) => {
-    let result = await fetch(`http://localhost:8000/deletePost/${Id._id}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/deletePost/${Id._id}`, {
       method: "delete",
       headers: {
         "Content-Type": "application/json",

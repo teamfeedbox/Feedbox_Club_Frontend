@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import { Link, useAsyncError } from "react-router-dom";
+// import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -19,7 +19,7 @@ import "./PostBigModel.css";
 import Modal from "react-bootstrap/Modal";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
-import { RotatingLines, ProgressBar } from "react-loader-spinner";
+import {  ProgressBar } from "react-loader-spinner";
 import { useStateValue } from "../../StateProvider";
 function PostBigModel({ openComment, setOpenComment, id, route }) {
   TimeAgo.addLocale(en);
@@ -56,7 +56,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              if (message == "") {
+              if (message === "") {
               } else {
                 updateComment();
               }
@@ -72,7 +72,8 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
                             rounded-full
                             object-cover
                             "
-                ></img>
+                            alt=""
+                />
               </div>
               <input
                 className="block mx-2 p-2.5 w-full text-sm rounded-lg border text-black"
@@ -84,6 +85,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
               <button
                 type="submit"
                 className="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
+                aria-labelledby="submitBtnLabel"
               >
                 <svg
                   aria-hidden="true"
@@ -152,8 +154,8 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
               <div className="Post-Big-Pro-img">
                 <img
                   src={user && user.postedBy && user.postedBy.img}
-                  alt="profile image"
-                ></img>
+                  alt=""
+                />
               </div>
               <div className="Post-Big-Title">
                 <div className="Post-Big-Title1">
@@ -187,7 +189,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
         {/* Comment part */}
 
         <div className="Post-Big-Comment">
-          {user && user.comment.length == 0 ? (
+          {user && user.comment.length === 0 ? (
             <div
               style={{
                 textAlign: "center",
@@ -210,8 +212,8 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
                     <div className="Comment-Left">
                       <img
                         className="object-contain"
-                        src={item && item.postedBy && item.postedBy.img}
-                      ></img>
+                        src={item && item.postedBy && item.postedBy.img} alt=""
+                      />
                     </div>
 
                     {/* Right part */}
@@ -264,7 +266,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
                         }
                       </div>
                       {/* * Section which will contain the reply on a comment*** */}
-                      {showReply == true && commentId == item._id ? (
+                      {showReply === true && commentId === item._id ? (
                         <section
                           style={{
                             display: "flex",
@@ -284,8 +286,8 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
                                   <img
                                     src={
                                       data && data.postedBy && data.postedBy.img
-                                    }
-                                  ></img>
+                                    } alt=""
+                                  />
                                 </div>
                                 <div key={data._id} className="Comment-Right">
                                   <div className="Comment-Right-Top">
@@ -334,8 +336,8 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
                       {/* Hide and show reply */}
 
                       {item.reply.length > 0 &&
-                      checkReply == true &&
-                      showReply != true ? (
+                      checkReply === true &&
+                      showReply !== true ? (
                         <span
                           onClick={() => {
                             setShowReply(true);
@@ -352,8 +354,8 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
                         >
                           ---- View Reply
                         </span>
-                      ) : hideReply == true &&
-                        commentId == item._id &&
+                      ) : hideReply === true &&
+                        commentId === item._id &&
                         item.reply.length > 0 ? (
                         <>
                           <span
@@ -416,15 +418,17 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
                                   updateReply();
 
                                   setShowReplyInputField(false);
-                                  if (replyMsg != "") {
+                                  if (replyMsg !== "") {
                                     setCheckreply(false);
                                     setHidereply(true);
                                   }
                                 }}
                                 type="button"
                                 className="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
+                                aria-labelledby="submitBtnLabel"
                               >
                                 <svg
+                                
                                   aria-hidden="true"
                                   className="w-6 h-6 rotate-90"
                                   fill="currentColor"
@@ -466,7 +470,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
   }, [id, loading]);
 
   const getPost = async () => {
-    let result = await fetch(`http://localhost:8000/userPost/${id}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/userPost/${id}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -482,7 +486,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
       setImg(currentUser.img);
       return;
     }
-    let result = await fetch(`http://localhost:8000/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -493,7 +497,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
 
   const updateComment = () => {
     console.log(id, "", message);
-    fetch("http://localhost:8000/comment", {
+    fetch("https://club-community-feedbox2-0-sdcn.vercel.app/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -514,7 +518,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
 
   const updateReply = () => {
     console.log(commentId, "", replyMsg);
-    fetch(`http://localhost:8000/reply/${commentId}`, {
+    fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/reply/${commentId}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -543,7 +547,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
   const deleteComment = async (deleteComId) => {
     console.log(deleteComId, " ", id);
     let result = await fetch(
-      `http://localhost:8000/commentDel/${deleteComId}`,
+      `https://club-community-feedbox2-0-sdcn.vercel.app/commentDel/${deleteComId}`,
       {
         method: "put",
         headers: {
@@ -567,7 +571,7 @@ function PostBigModel({ openComment, setOpenComment, id, route }) {
 
   const deleteReply = async (replyId) => {
     console.log(replyId, " ", id);
-    let result = await fetch(`http://localhost:8000/replyDel/${replyId}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/replyDel/${replyId}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

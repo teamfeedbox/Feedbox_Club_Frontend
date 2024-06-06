@@ -21,7 +21,7 @@ const ProductCard = ({ product, setProducts, products, id, colo, productsList })
     }).then(async (result) => {
       if (result.isConfirmed) {
         const deleteCall = await fetch(
-          `http://localhost:8000/merchandise/product/delete/${id}`,
+          `https://club-community-feedbox2-0-sdcn.vercel.app/merchandise/product/delete/${id}`,
           {
             method: "DELETE",
             headers: {

@@ -57,7 +57,7 @@ const HomePageCal = ({ clgData, eventSel }) => {
   }, [clgData,dupData])
 
   const getAllEvents =async () => {
-    let res = await fetch("http://localhost:8000/getAllEvent");
+    let res = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent");
     res = await res.json();
     dispatch({
       type: 'INIT_ALL_EVENT',

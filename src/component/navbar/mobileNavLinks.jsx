@@ -95,7 +95,7 @@ export function MobileNavLinks(props) {
   // console.log(userId)
   const getUser = async () => {
     // console.log(id)
-    let result = await fetch(`http://localhost:8000/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

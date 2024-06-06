@@ -57,7 +57,7 @@ const HomePageProfile = (props) => {
     if (allUsers) {
       setallUser(allUsers);
     } else {
-      let result = await fetch("http://localhost:8000/get");
+      let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/get");
       result = await result.json();
       let array = [];
       result.map(data => {

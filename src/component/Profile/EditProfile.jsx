@@ -64,7 +64,7 @@ const EditProfile = ({ Userbio, Username, Useryear, open, setOpen,sendData }) =>
     console.log(collegeYear, name, bio);
     // console.log(data)
     setLoading(true);
-    let result = await fetch(`http://localhost:8000/updateDetail/${data}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${data}`, {
       method: "put",
       body: JSON.stringify({ bio,name, collegeYear }),
       headers: {
@@ -93,7 +93,7 @@ const EditProfile = ({ Userbio, Username, Useryear, open, setOpen,sendData }) =>
     if (currentUser) {
       setUser(currentUser)
     } else {
-      let result = await fetch(`http://localhost:8000/user`, {
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },
@@ -118,7 +118,7 @@ const EditProfile = ({ Userbio, Username, Useryear, open, setOpen,sendData }) =>
     if (collegeYear) fdata.append("collegeYear", collegeYear)
     if (bio) fdata.append("bio", bio)
 
-    const data = await fetch(`http://localhost:8000/update/details/pic/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/update/details/pic/${id}`, {
       method: "PUT",
       body: fdata,
       headers: {
@@ -134,7 +134,7 @@ const EditProfile = ({ Userbio, Username, Useryear, open, setOpen,sendData }) =>
     });
 
     if (currentUser && currentUser.imgId) {
-      const data = await fetch(`http://localhost:8000/delete/image/user/${currentUser.imgId}`, {
+      const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/delete/image/user/${currentUser.imgId}`, {
         method: "DELETE",
         body: fdata,
         headers: {

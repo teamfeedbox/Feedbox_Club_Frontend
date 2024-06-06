@@ -20,7 +20,7 @@ function ProfileBanner(props) {
   const [{ currentUser }] = useStateValue();
 
   const getUser = async () => {
-    let result = await fetch(`http://localhost:8000/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

@@ -82,7 +82,7 @@ function Overview(props) {
       setData(currentUser);
       return;
     }
-    let result = await fetch(`http://localhost:8000/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -99,7 +99,7 @@ function Overview(props) {
 
   const updateSkills = async (userId) => {
     setLoading(true);
-    let result = await fetch(`http://localhost:8000/updateDetail/${userId}`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${userId}`, {
       method: "put",
       body: JSON.stringify({ skills }),
       headers: {
@@ -279,7 +279,7 @@ function Overview(props) {
               <div className="statistics">
                 <section>
                   <div className="Detail-icon5">
-                    <img src="Images/Money.png"></img>
+                    <img src="Images/Money.png" alt=""/>
                   </div>
                   <div className="Right-Sub">
                     <span className="text-[1.1rem] font-[700]">
@@ -292,7 +292,7 @@ function Overview(props) {
 
                 <section>
                   <div className="Detail-icon Detail-icon6">
-                    <img src="Images/Stars.png"></img>
+                    <img src="Images/Stars.png" alt="" />
                   </div>
                   <div className="Right-Sub">
                     <span className="text-[1.1rem] font-[700] ">
@@ -440,7 +440,7 @@ function Overview(props) {
               <div className="statistics">
                 <section>
                   <div className="Detail-icon5">
-                    <img src="Images/Money.png"></img>
+                    <img src="Images/Money.png" alt="" />
                   </div>
                   <div className="Right-Sub">
                     <span className="text-[1.1rem] font-[700]">
@@ -453,7 +453,7 @@ function Overview(props) {
 
                 <section>
                   <div className="Detail-icon Detail-icon6">
-                    <img src="Images/Stars.png"></img>
+                    <img src="Images/Stars.png" alt="" />
                   </div>
                   <div className="Right-Sub">
                     <span className="text-[1.1rem] font-[700] ">

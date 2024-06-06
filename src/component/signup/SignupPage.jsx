@@ -45,7 +45,7 @@ const SignupPage = () => {
 
   const collectData = async (e) => {
     e.preventDefault();
-    let result = await fetch("http://localhost:8000/register", {
+    let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/register", {
       method: "post", // post method because we want to save the data
       body: JSON.stringify({
         name,
@@ -147,7 +147,7 @@ const SignupPage = () => {
             <div class="form-outline flex-fill mb-0">
               {/* <input type="year" id="year" class="form-control" placeholder="Year"
               /> */}
-            <Select options={options} placeholder="Select Year.."/>
+            <select options={options} placeholder="Select Year.."/>
             </div>
           </div>
 

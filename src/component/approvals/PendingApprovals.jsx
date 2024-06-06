@@ -2,7 +2,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import "./PendingApprovals.css";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import { useStateValue } from "../../StateProvider";
 
 const PendingApprovals = (props) => {
@@ -28,7 +28,7 @@ const PendingApprovals = (props) => {
   const getUser = async () => {
     console.log("dlkcnus");
     setLoading3(true);
-    const result = await fetch(`http://localhost:8000/get`);
+    const result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/get`);
     const res = await result.json();
     console.log(res, 'pApprovalsssssss');
     let user = [];
@@ -113,7 +113,7 @@ const PendingApprovals = (props) => {
     setDeclineLoading(true);
     setLoading(true);
     setDid(i)
-    const data = await fetch(`http://localhost:8000/user/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     });
@@ -124,7 +124,7 @@ const PendingApprovals = (props) => {
 
   const handleEmail = async (id) => {
     setLoading(true);
-    const data = await fetch(`http://localhost:8000/sendmail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/sendmail/${id}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });
@@ -135,7 +135,7 @@ const PendingApprovals = (props) => {
   const handleAccept = async (id, i) => {
     setLoading(true)
     setId(i)
-    const data = await fetch(`http://localhost:8000/updateDetail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: "Club_Member" }),

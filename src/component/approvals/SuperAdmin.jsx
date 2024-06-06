@@ -2,7 +2,7 @@ import { faSearch, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import "./PendingApprovals.css";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import Modal from "react-bootstrap/Modal";
 import "./ClubMember.css";
 
@@ -12,7 +12,7 @@ const SuperAdmin = () => {
   const [superAdmin,setSuperAdmin]=useState([]);
 
   const getUser = async () => {
-    const result = await fetch(`http://localhost:8000/get`);
+    const result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/get`);
     const res = await result.json();
     let sadmin = [];
     res && res.map((data) => {
@@ -72,8 +72,8 @@ const SuperAdmin = () => {
             <table class="table-auto w-full max-w-[1300px]">
               <tbody class="text-sm divide-y  divide-gray-100 max-w-[1150px]">
                 {superAdmin.length>0 ?
-                  superAdmin.map((member) => (
-                    <tr className="flex justify-between ">
+                  superAdmin.map((member, index) => (
+                    <tr key={member.id || index} className="flex justify-between ">
                       <td class="p-2 w-[200px] lg:w-[400px]">
                         <div className="flex items-center">
                           <img

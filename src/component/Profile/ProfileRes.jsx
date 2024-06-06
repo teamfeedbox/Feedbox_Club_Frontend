@@ -22,7 +22,7 @@ const ProfileRes = () => {
 
   const getResource = async () => {
     setLoading(true);
-    let result = await fetch("http://localhost:8000/myResource", {
+    let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/myResource", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -35,7 +35,7 @@ const ProfileRes = () => {
   const deleteRes = async (item) => {
     console.log(item);
     if (item.type === "pdf") {
-      let result = await fetch(`http://localhost:8000/delete/Resource/pdf`, {
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/delete/Resource/pdf`, {
         method: "delete",
         body: JSON.stringify(item),
         headers: {
@@ -47,7 +47,7 @@ const ProfileRes = () => {
       addToast(result, { appearance: "success" })
       setLoad(true)
     } else if (item.type === "link") {
-      let result = await fetch(`http://localhost:8000/delete/Resource/link/${item._id}`, {
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/delete/Resource/link/${item._id}`, {
         method: "delete",
       });
       result = await result.json();

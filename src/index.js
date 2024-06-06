@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { StateProvider } from "./StateProvider";
 import reducer, { initialState } from "./reducer";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { ToastProvider } from "react-toast-notifications";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

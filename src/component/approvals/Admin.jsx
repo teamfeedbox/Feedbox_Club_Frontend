@@ -2,7 +2,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import "./PendingApprovals.css";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import Modal from "react-bootstrap/Modal";
 import "./ClubMember.css";
 import { Link } from "react-router-dom";
@@ -26,7 +26,7 @@ const Admin = (props) => {
   const getUser = async () => {
     setLoading3(true);
     try {
-      const result = await fetch(`http://localhost:8000/get`);
+      const result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/get`);
       const res = await result.json();
       const admin = res.filter((data) => data.role === "Admin").reverse();
 
@@ -85,7 +85,7 @@ const Admin = (props) => {
 
   const handleDeleteAdmin = async () => {
     setLoading(true);
-    const data = await fetch(`http://localhost:8000/updateDetail/${id}`, {
+    const data = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/updateDetail/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ role: "Club_Member" }),
@@ -95,7 +95,7 @@ const Admin = (props) => {
     setDelShow(false);
 
     //  notification
-    await fetch("http://localhost:8000/addNotifications", {
+    await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
       method: "post",
       body: JSON.stringify({
         message: `Now You are degraded Admin to Club Member, please login again`,
@@ -139,7 +139,7 @@ const Admin = (props) => {
             <tbody class="text-sm divide-y  divide-gray-100 max-w-[1150px]">
               {loading3 ? (
                 <div
-                  class="spinner-border text-blue"
+                  className="spinner-border text-blue"
                   role="status"
                   style={{
                     height: "35px",
@@ -148,15 +148,15 @@ const Admin = (props) => {
                     marginLeft: "75px",
                   }}
                 >
-                  <span class="visually-hidden">Loading...</span>
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               ) : admin.length > 0 ? (
                 admin.map((member) => (
-                  <tr className="">
-                    <td class=" p-2 w-[170px] md:w-[250px]  lg:w-[600px] ">
+                  <tr key={member._id} className="">
+                    <td className="p-2 w-[170px] md:w-[250px] lg:w-[600px]">
                       <div className="flex items-center">
                         <img
-                          class="rounded-full w-[40px] h-[40px] object-center"
+                          className="rounded-full w-[40px] h-[40px] object-center"
                           src={member.img}
                           width="40"
                           height="40"
@@ -168,25 +168,23 @@ const Admin = (props) => {
                             state={member}
                             className="link-to-profile"
                           >
-                            <div className="ml-2 text-[.8rem] md:text-[1rem]  lg:text-[1.05rem] font-[400]">
-                              {" "}
-                              {member.name}{" "}
+                            <div className="ml-2 text-[.8rem] md:text-[1rem] lg:text-[1.05rem] font-[400]">
+                              {member.name}
                             </div>
                           </Link>
                         ) : (
-                          <div className="ml-2 text-[.8rem] md:text-[1rem]  lg:text-[1.05rem] font-[400]">
-                            {" "}
-                            {member.name}{" "}
+                          <div className="ml-2 text-[.8rem] md:text-[1rem] lg:text-[1.05rem] font-[400]">
+                            {member.name}
                           </div>
                         )}
                       </div>
                     </td>
-                    <td class="p-2 w-[170px] lg:w-[400px] block lg:flex flex-start items-center  mr-8 ">
-                      <div class=" text-gray-800  text-[.8rem] md:text-[1rem]  lg:text-[1.05rem] font-[400]">
+                    <td className="p-2 w-[170px] lg:w-[400px] block lg:flex flex-start items-center mr-8">
+                      <div className="text-gray-800 text-[.8rem] md:text-[1rem] lg:text-[1.05rem] font-[400]">
                         {member.position}
                       </div>
                     </td>
-                    <td className=" w-[100px] my-auto">
+                    <td className="w-[100px] my-auto">
                       <div
                         className="text-red-500"
                         onClick={() => {
@@ -194,7 +192,7 @@ const Admin = (props) => {
                           setId(member._id);
                         }}
                       >
-                        <button className="h-[25px] py-3 flex items-center px-3 rounded-xl text-white bg-[#ff0000]  text-[.8rem] md:text-[1rem]  lg:text-[1.05rem] font-[500] hover:bg-[#bf1004]">
+                        <button className="h-[25px] py-3 flex items-center px-3 rounded-xl text-white bg-[#ff0000] text-[.8rem] md:text-[1rem] lg:text-[1.05rem] font-[500] hover:bg-[#bf1004]">
                           Delete
                         </button>
                       </div>
@@ -208,13 +206,13 @@ const Admin = (props) => {
                             closeButton
                             className="club-member-modal-header"
                           >
-                            Are you sure to make this Admin as Club Member ?
+                            Are you sure to make this Admin as Club Member?
                           </Modal.Header>
                           <Modal.Footer className="modal-footer club-member-modal-footer">
                             <div className="modal-footer-club-member-yes-no-div">
                               {loading ? (
                                 <div
-                                  class="spinner-border text-blue"
+                                  className="spinner-border text-blue"
                                   role="status"
                                   style={{
                                     height: "35px",
@@ -223,14 +221,11 @@ const Admin = (props) => {
                                     marginLeft: "75px",
                                   }}
                                 >
-                                  <span class="visually-hidden">
-                                    Loading...
-                                  </span>
+                                  <span className="visually-hidden">Loading...</span>
                                 </div>
                               ) : (
                                 <div onClick={handleDeleteAdmin}>Yes</div>
                               )}
-
                               <button
                                 onClick={(e) => {
                                   e.preventDefault();
@@ -251,6 +246,7 @@ const Admin = (props) => {
                   <div className="text-[1rem] font-[400]">No Admin !</div>
                 </div>
               )}
+
             </tbody>
           </table>
         </Scrollbars>

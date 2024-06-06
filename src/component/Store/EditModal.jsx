@@ -44,7 +44,7 @@ const EditModal = ({ isOpen, onClose, product, setProducts, products, id }) => {
     fdata.append("price", price);
 
     const data = await fetch(
-      `http://localhost:8000/merchandise/product/${id}`,
+      `https://club-community-feedbox2-0-sdcn.vercel.app/merchandise/product/${id}`,
       {
         method: "PUT",
         body: fdata,

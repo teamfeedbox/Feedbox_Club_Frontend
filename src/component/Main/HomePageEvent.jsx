@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Scrollbars from "react-custom-scrollbars";
+import Scrollbars from "react-custom-scrollbars-2";
 import { useStateValue } from "../../StateProvider";
 import Cal from "./date.png";
 

@@ -6,7 +6,7 @@ import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import "./RescourcesTable.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Swal from "sweetalert2";
-import moment from"moment";
+import moment from "moment";
 
 
 
@@ -66,7 +66,7 @@ const RescourcesTable = (props) => {
   const itemsPerPage = 3;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentdate = moment().format('DD/MM/YYYY'); 
+  const currentdate = moment().format('DD/MM/YYYY');
   const [{ currentUser }, dispatch] = useStateValue();
 
   let tableData = data && data.slice(startIndex, endIndex);
@@ -96,7 +96,7 @@ const RescourcesTable = (props) => {
       setImg(currentUser.img);
       return;
     }
-    let result = await fetch(`http://localhost:8000/user`, {
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -141,7 +141,7 @@ const RescourcesTable = (props) => {
       formData.append("title", title);
       formData.append("skill", skillName);
 
-      const response = await fetch("http://localhost:8000/upload", {
+      const response = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/upload", {
         method: "POST",
         body: formData,
         headers: {
@@ -171,7 +171,7 @@ const RescourcesTable = (props) => {
         skill: skillName,
       };
 
-      const response = await fetch("http://localhost:8000/linkUpload", {
+      const response = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/linkUpload", {
         method: "POST",
         body: JSON.stringify(val),
         headers: {
@@ -203,7 +203,7 @@ const RescourcesTable = (props) => {
     // console.log("l,mnuhgftr");
     setLoading2(true);
     let result = await fetch(
-      `http://localhost:8000/getAllResource/${skillName}`,
+      `https://club-community-feedbox2-0-sdcn.vercel.app/getAllResource/${skillName}`,
       {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
@@ -255,7 +255,7 @@ const RescourcesTable = (props) => {
       if (result.isConfirmed) {
         const _id = { _id: id, driveId };
         const deleteCall = await fetch(
-          "http://localhost:8000/delete/Resource/pdf",
+          "https://club-community-feedbox2-0-sdcn.vercel.app/delete/Resource/pdf",
           {
             method: "DELETE",
             headers: {
@@ -499,8 +499,8 @@ const RescourcesTable = (props) => {
                               {item &&
                                 item.date &&
                                 currentdate
-                                
-                                }
+
+                              }
                             </div>
                           </td>
                           <td className="p-2">
@@ -585,26 +585,35 @@ const RescourcesTable = (props) => {
               {tableData && tableData.length > 0 ? (
                 <nav className="d-flex">
                   <ul className="res-paginate">
-                    <button
-                      onClick={goToPrev}
-                      className="prev"
-                      disabled={currentPage === 1}
-                    >
-                      <GrFormPrevious size="25" />
-                    </button>
-                    <p className="nums">
-                      {tableData && tableData.length > 0
-                        ? `${currentPage}/${totalPages}`
-                        : "0/0"}
-                    </p>
-                    <button
-                      onClick={goToNext}
-                      className="prev"
-                      disabled={currentPage >= totalPages}
-                    >
-                      <GrFormNext size="25" />
-                    </button>
+                    <li>
+                      <button
+                        onClick={goToPrev}
+                        className="prev"
+                        aria-label="Go to previous page"  // Adding an aria-label for better accessibility
+                        disabled={currentPage === 1}
+                      >
+                        <GrFormPrevious size="25" />
+                      </button>
+                    </li>
+                    <li>
+                      <p className="nums">
+                        {tableData && tableData.length > 0
+                          ? `${currentPage}/${totalPages}`
+                          : "0/0"}
+                      </p>
+                    </li>
+                    <li>
+                      <button
+                        onClick={goToNext}
+                        className="prev"
+                        aria-label="Go to next page"  // Adding an aria-label for better accessibility
+                        disabled={currentPage >= totalPages}
+                      >
+                        <GrFormNext size="25" />
+                      </button>
+                    </li>
                   </ul>
+
                 </nav>
               ) : (
                 ""
