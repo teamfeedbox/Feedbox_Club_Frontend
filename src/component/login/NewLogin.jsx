@@ -84,11 +84,9 @@ const NewLogin = () => {
             < div className={` sm:items-center justify-self-center ${isDivWhite ? "bg-[#ffffff] text-[#ffffff]" : "text-[#ffffff]" }`}
           style={{ transition: `transform (${isDivWhite ?  "1.5s" : "2s"}) ease-in-out delay-200`,}}>
 
-              <h1 className="my-3 font-semibold text-4xl">Welcome back</h1>
+              <h1 className="my-3 font-semibold text-4xl">Welcome back!</h1>
               <p className="pr-3 text-sm opacity-75">
-                Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and visual
-                mockups
+Sign in to access your account and continue enjoying all the benefits of our community.
               </p>
               <button
                    className={`w-50% text-white font-bold py-2 px-4 rounded-3xl  mt-2  ${isDivWhite ? "bg-[#ffffff] text-[#000000]" : "bg-[#9647ff]"}  bg-[#9647ff] shadow-[#000000] shadow-lg focus:outline-none `}
