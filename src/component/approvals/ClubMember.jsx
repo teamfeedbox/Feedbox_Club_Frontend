@@ -158,11 +158,11 @@ const ClubMember = ({ props }) => {
     }
 
     //  notification
-<<<<<<< HEAD
-    await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
-=======
+// <<<<<<< HEAD
+//     await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
+// =======
     await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       body: JSON.stringify({
         message: `Congrats: Now You are upgraded Club Member to ${value}, please login again`,

@@ -70,11 +70,11 @@ const PostDisplay = (props) => {
       // console.log(allPosts, "alllPiskjdihd");
       result = allPosts;
     } else {
-<<<<<<< HEAD
-      let res = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllPost", {
-=======
+// <<<<<<< HEAD
+//       let res = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllPost", {
+// =======
       let res = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllPost`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },
@@ -148,11 +148,11 @@ const PostDisplay = (props) => {
 
   // Like a post
   const like = debounce( (id, index) => {
-<<<<<<< HEAD
-    fetch("https://club-community-feedbox2-0-sdcn.vercel.app/like", {
-=======
+// <<<<<<< HEAD
+//     fetch("https://club-community-feedbox2-0-sdcn.vercel.app/like", {
+// =======
     fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/like`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -184,11 +184,11 @@ const PostDisplay = (props) => {
 
   // Unlike a Post
   const unlike = debounce((id) => {
-<<<<<<< HEAD
-    fetch("https://club-community-feedbox2-0-sdcn.vercel.app/unlike", {
-=======
+// <<<<<<< HEAD
+//     fetch("https://club-community-feedbox2-0-sdcn.vercel.app/unlike", {
+// =======
     fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/unlike`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "put",
       headers: {
         "Content-Type": "application/json",

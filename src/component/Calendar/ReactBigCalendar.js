@@ -159,11 +159,11 @@ export default function ReactBigCalendar() {
     } else {
       console.log("lojihihi");
       setInfinite(false);
-<<<<<<< HEAD
-      result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent");
-=======
+      // <<<<<<< HEAD
+      //       result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent");
+      // =======
       result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent`);
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+      // >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       result = await result.json();
       dispatch({
         type: "INIT_ALL_EVENT",
@@ -309,11 +309,11 @@ export default function ReactBigCalendar() {
     console.log(val, "val");
     e.preventDefault();
     toast.dark("Event Created Successfully!");
-<<<<<<< HEAD
-    let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/createEvent", {
-=======
+    // <<<<<<< HEAD
+    //     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/createEvent", {
+    // =======
     let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/createEvent`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+      // >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       body: JSON.stringify(val),
       headers: {
@@ -344,11 +344,11 @@ export default function ReactBigCalendar() {
     setAddEventModel(false);
 
     //  notification
-<<<<<<< HEAD
-    await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
-=======
+    // <<<<<<< HEAD
+    //     await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
+    // =======
     await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+      // >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       body: JSON.stringify({
         message: ` Alert: Join ${title} on ${eventDate} ${eventTime} at ${venue}`,
@@ -412,27 +412,26 @@ export default function ReactBigCalendar() {
     setPreEventModel(false);
 
     //  notification
-<<<<<<< HEAD
-    //  await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
-=======
-    //  await fetch("https://club-community-feedbox2-0-sdcn.vercel.app///addNotifications", {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
-    //   method: "post",
-    //   body: JSON.stringify({
-    //     message: ` Alert: ${title} has been cancelled`,
-    //     messageScope: scope,
-    //     userId: id,
-
-    //   }),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: "Bearer " + localStorage.getItem("jwt"),
-    //   },
-    // }).then((res) => {
-    //   // alert(res.json)
-    //   setLoading(false);
-    //   window.location.href="/calendar"
-    // });
+    // <<<<<<< HEAD
+    //     //  await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
+    // =======
+    await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
+      // >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+      method: "post",
+      body: JSON.stringify({
+        message: ` Alert: ${title} has been cancelled`,
+        messageScope: scope,
+        userId: id,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    }).then((res) => {
+      // alert(res.json)
+      setLoading(false);
+      window.location.href = "/calendar"
+    });
     setLoading2(false);
 
     window.location.href = "/calendar";
@@ -447,9 +446,9 @@ export default function ReactBigCalendar() {
 
   return (
     <>
-      <div className="Calendar-container"  style={{
-      backgroundColor: 'white'
-    }}>
+      <div className="Calendar-container" style={{
+        backgroundColor: 'white'
+      }}>
         <div className="Calendar-left">
           {/* ----------------college dropdown for super admin--------------- */}
           {role && (role == "Super_Admin" || role === "Admin") ? (
@@ -535,14 +534,14 @@ export default function ReactBigCalendar() {
                 </div>
                 <div className="event-profile">
                   <FontAwesomeIcon
-                    style={{ margin: "0 10px 0 0", color : "#ec4882" }}
+                    style={{ margin: "0 10px 0 0", color: "#ec4882" }}
                     icon={faPodcast}
                   />
                   {myEvent && myEvent.speaker}
                 </div>
                 <div className="event-profile">
                   <FontAwesomeIcon
-                    style={{ margin: "0 10px 0 0", color : "#ec4882" }}
+                    style={{ margin: "0 10px 0 0", color: "#ec4882" }}
                     icon={faUniversity}
                   />
                   {myEvent && myEvent.postedBy.role === "Super_Admin"
@@ -552,14 +551,14 @@ export default function ReactBigCalendar() {
                 <div className="event-minor">
                   <div>
                     <FontAwesomeIcon
-                      style={{ margin: "0 10px 0 0", color : "#ec4882" }}
+                      style={{ margin: "0 10px 0 0", color: "#ec4882" }}
                       icon={faLocationDot}
                     />
                     {myEvent && myEvent.venue}
                   </div>
                   <div>
                     <FontAwesomeIcon
-                      style={{ margin: "0 10px 0 0", color : "#ec4882" }}
+                      style={{ margin: "0 10px 0 0", color: "#ec4882" }}
                       icon={faCalendarAlt}
                     />
                     {myEvent && myEvent.eventDate}
@@ -567,7 +566,7 @@ export default function ReactBigCalendar() {
 
                   <div>
                     <FontAwesomeIcon
-                      style={{ margin: "0 10px 0 0", color : "#ec4882" }}
+                      style={{ margin: "0 10px 0 0", color: "#ec4882" }}
                       icon={faClock}
                     />
                     {myEvent && myEvent.eventTime}
@@ -582,7 +581,7 @@ export default function ReactBigCalendar() {
                   {role && role !== "Super_Admin" ? (
                     id && myEvent && id !== myEvent.postedBy._id ? (
                       new Date(myEvent && myEvent.eventDate).getTime() >
-                      new Date(mindate).getTime() ? (
+                        new Date(mindate).getTime() ? (
                         interestedBtn ? (
                           <button
                             type="button"
@@ -590,7 +589,7 @@ export default function ReactBigCalendar() {
                               attendanceUpdate(myEvent && myEvent._id);
                               setInterestedBtn(false);
                             }}
-                            style={{backgroundColor : '#9647ff'}}
+                            style={{ backgroundColor: '#9647ff' }}
                           >
                             Interested
                           </button>
@@ -618,15 +617,15 @@ export default function ReactBigCalendar() {
                   {(role === "Admin" ||
                     role === "Super_Admin" ||
                     (id && myEvent && id == myEvent.postedBy._id)) && (
-                    <button
-                      onClick={() => {
-                        setDeleteBtn(true);
-                      }}
-                      style={{backgroundColor : "#9647ff"}}
-                    >
-                      Delete Event
-                    </button>
-                  )}
+                      <button
+                        onClick={() => {
+                          setDeleteBtn(true);
+                        }}
+                        style={{ backgroundColor: "#9647ff" }}
+                      >
+                        Delete Event
+                      </button>
+                    )}
 
                   {deletebtn && (
                     <Modal show={deletebtn} onHide={() => setDeleteBtn(false)}>
@@ -668,8 +667,8 @@ export default function ReactBigCalendar() {
                 {MAVisibility && (
                   <div style={{ textAlign: "center" }}>
                     {role === "Admin" ||
-                    role === "Super_Admin" ||
-                    (id && myEvent && id == myEvent.postedBy._id) ? (
+                      role === "Super_Admin" ||
+                      (id && myEvent && id == myEvent.postedBy._id) ? (
                       <button className="Mark-Attendence-btn">
                         <Link
                           to={"/attendance/" + (myEvent && myEvent.title)}

@@ -142,11 +142,11 @@ const CreatePost = (props) => {
       }
     }
 
-<<<<<<< HEAD
-    const data = fetch("https://club-community-feedbox2-0-sdcn.vercel.app/create-post", {
-=======
+// <<<<<<< HEAD
+//     const data = fetch("https://club-community-feedbox2-0-sdcn.vercel.app/create-post", {
+// =======
     const data = fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/create-post`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),

@@ -88,11 +88,11 @@ const Register = () => {
     setLoading(true);
     // generateUniqueid();
     e.preventDefault();
-<<<<<<< HEAD
-    let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/register", {
-=======
+// <<<<<<< HEAD
+//     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/register", {
+// =======
     let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/register`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post", // post method because we want to save the data
       body: JSON.stringify({
         name,

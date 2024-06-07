@@ -57,11 +57,11 @@ const HomePageCal = ({ clgData, eventSel }) => {
   }, [clgData,dupData])
 
   const getAllEvents =async () => {
-<<<<<<< HEAD
-    let res = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent");
-=======
+// <<<<<<< HEAD
+//     let res = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent");
+// =======
     let res = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent`);
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
     res = await res.json();
     dispatch({
       type: 'INIT_ALL_EVENT',

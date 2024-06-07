@@ -47,11 +47,11 @@ const ProfilePost = (prop) => {
 
   const myPost = async () => {
     setLoading2(true);
-<<<<<<< HEAD
-    let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/myPost", {
-=======
+// <<<<<<< HEAD
+//     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/myPost", {
+// =======
     let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/myPost`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -93,11 +93,11 @@ const ProfilePost = (prop) => {
 
   // Like a post
   const like = (id) => {
-<<<<<<< HEAD
-    fetch("https://club-community-feedbox2-0-sdcn.vercel.app/like", {
-=======
+// <<<<<<< HEAD
+//     fetch("https://club-community-feedbox2-0-sdcn.vercel.app/like", {
+// =======
     fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/like`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -126,11 +126,11 @@ const ProfilePost = (prop) => {
 
   // Unlike a Post
   const unlike = (id) => {
-<<<<<<< HEAD
-    fetch("https://club-community-feedbox2-0-sdcn.vercel.app/unlike", {
-=======
+// <<<<<<< HEAD
+//     fetch("https://club-community-feedbox2-0-sdcn.vercel.app/unlike", {
+// =======
     fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/unlike`, {
->>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
+// >>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "put",
       headers: {
         "Content-Type": "application/json",
