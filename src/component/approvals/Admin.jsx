@@ -95,7 +95,11 @@ const Admin = (props) => {
     setDelShow(false);
 
     //  notification
+<<<<<<< HEAD
     await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
+=======
+    await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       body: JSON.stringify({
         message: `Now You are degraded Admin to Club Member, please login again`,

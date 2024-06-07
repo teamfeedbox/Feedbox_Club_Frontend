@@ -239,7 +239,11 @@ const [isLoadingEvents, setIsLoadingEvents] = useState(false);
   //   if (allUsers) {
   //     setUser(allUsers);
   //   } else {
+<<<<<<< HEAD
   //     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/get");
+=======
+  //     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app//get");
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
   //     result = await result.json();
   //     let array = [];
   //     // result.map((data) => {
@@ -272,7 +276,11 @@ const [isLoadingEvents, setIsLoadingEvents] = useState(false);
       if (allUsers) {
         result = allUsers;
       } else {
+<<<<<<< HEAD
         const response = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/get");
+=======
+        const response = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/get`);
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
         result = await response.json();
         if (response.ok) {
           let array = result.filter(data =>
@@ -323,7 +331,11 @@ const [isLoadingEvents, setIsLoadingEvents] = useState(false);
     if (allEventsData) {
       res = allEventsData;
     } else {
+<<<<<<< HEAD
       let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent");
+=======
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent`);
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       res = await result.json();
     }
     // await e.preventDefault();

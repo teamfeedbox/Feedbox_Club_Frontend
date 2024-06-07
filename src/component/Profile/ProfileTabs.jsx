@@ -45,7 +45,11 @@ const ProfileTabs = (props) => {
 
   const getUser = async () => {
     if (!currentUser) {
+<<<<<<< HEAD
       let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/user`, {
+=======
+      let result = await fetch(`https://club-community-feedbox2-0-sdcn-f4nbfkrt9-feedboxs-projects.vercel.app/user`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
         headers: {
           Authorization: "Bearer " + localStorage.getItem("jwt"),
         },

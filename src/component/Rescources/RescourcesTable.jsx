@@ -141,7 +141,11 @@ const RescourcesTable = (props) => {
       formData.append("title", title);
       formData.append("skill", skillName);
 
+<<<<<<< HEAD
       const response = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/upload", {
+=======
+      const response = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/upload`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
         method: "POST",
         body: formData,
         headers: {
@@ -171,7 +175,11 @@ const RescourcesTable = (props) => {
         skill: skillName,
       };
 
+<<<<<<< HEAD
       const response = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/linkUpload", {
+=======
+      const response = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/linkUpload`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
         method: "POST",
         body: JSON.stringify(val),
         headers: {
@@ -255,7 +263,11 @@ const RescourcesTable = (props) => {
       if (result.isConfirmed) {
         const _id = { _id: id, driveId };
         const deleteCall = await fetch(
+<<<<<<< HEAD
           "https://club-community-feedbox2-0-sdcn.vercel.app/delete/Resource/pdf",
+=======
+          `https://club-community-feedbox2-0-sdcn.vercel.app/delete/Resource/pdf`,
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
           {
             method: "DELETE",
             headers: {

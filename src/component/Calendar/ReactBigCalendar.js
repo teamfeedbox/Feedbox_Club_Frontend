@@ -159,7 +159,11 @@ export default function ReactBigCalendar() {
     } else {
       console.log("lojihihi");
       setInfinite(false);
+<<<<<<< HEAD
       result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent");
+=======
+      result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/getAllEvent`);
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       result = await result.json();
       dispatch({
         type: "INIT_ALL_EVENT",
@@ -305,7 +309,11 @@ export default function ReactBigCalendar() {
     console.log(val, "val");
     e.preventDefault();
     toast.dark("Event Created Successfully!");
+<<<<<<< HEAD
     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/createEvent", {
+=======
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/createEvent`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       body: JSON.stringify(val),
       headers: {
@@ -336,7 +344,11 @@ export default function ReactBigCalendar() {
     setAddEventModel(false);
 
     //  notification
+<<<<<<< HEAD
     await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
+=======
+    await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       body: JSON.stringify({
         message: ` Alert: Join ${title} on ${eventDate} ${eventTime} at ${venue}`,
@@ -400,7 +412,11 @@ export default function ReactBigCalendar() {
     setPreEventModel(false);
 
     //  notification
+<<<<<<< HEAD
     //  await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/addNotifications", {
+=======
+    //  await fetch("https://club-community-feedbox2-0-sdcn.vercel.app///addNotifications", {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
     //   method: "post",
     //   body: JSON.stringify({
     //     message: ` Alert: ${title} has been cancelled`,

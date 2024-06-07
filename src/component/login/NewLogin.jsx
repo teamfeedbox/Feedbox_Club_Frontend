@@ -20,7 +20,11 @@ const NewLogin = () => {
     e.preventDefault();
     console.log(email, password);
 
+<<<<<<< HEAD
     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/login", {
+=======
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/login`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: {

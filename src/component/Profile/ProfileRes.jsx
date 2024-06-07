@@ -22,7 +22,11 @@ const ProfileRes = () => {
 
   const getResource = async () => {
     setLoading(true);
+<<<<<<< HEAD
     let result = await fetch("https://club-community-feedbox2-0-sdcn.vercel.app/myResource", {
+=======
+    let result = await fetch(`https://club-community-feedbox2-0-sdcn.vercel.app/myResource`, {
+>>>>>>> 7c82d27442a7e494d7a4da28c9c8f4883b300cf0
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
